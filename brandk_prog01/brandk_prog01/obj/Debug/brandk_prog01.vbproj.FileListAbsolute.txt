@@ -1,0 +1,2 @@
+C:\Users\Kody\AppData\Local\Temporary Projects\brandk_prog01\bin\Debug\brandk_prog01.exe.config
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog01\brandk_prog01\bin\Debug\brandk_prog01.exe.config
