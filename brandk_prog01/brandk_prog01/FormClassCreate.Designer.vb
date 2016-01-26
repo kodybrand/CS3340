@@ -24,17 +24,17 @@ Partial Class FormClassCreate
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ButtonsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ShowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ButtonsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CreateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.RemoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lblCaption = New System.Windows.Forms.Label()
+        Me.lblKey = New System.Windows.Forms.Label()
+        Me.txtKey = New System.Windows.Forms.TextBox()
+        Me.txtCaption = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,82 +54,87 @@ Partial Class FormClassCreate
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
         '
-        'ButtonsToolStripMenuItem
-        '
-        Me.ButtonsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateToolStripMenuItem, Me.ToolStripMenuItem2, Me.RemoveToolStripMenuItem})
-        Me.ButtonsToolStripMenuItem.Name = "ButtonsToolStripMenuItem"
-        Me.ButtonsToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.ButtonsToolStripMenuItem.Text = "&Buttons"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(121, 120)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Caption"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(319, 120)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(25, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Key"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(261, 136)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(142, 20)
-        Me.TextBox1.TabIndex = 2
-        Me.TextBox1.Text = "S16"
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(72, 136)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(142, 20)
-        Me.TextBox2.TabIndex = 1
-        Me.TextBox2.Text = "First"
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'ShowToolStripMenuItem
         '
         Me.ShowToolStripMenuItem.Name = "ShowToolStripMenuItem"
+        Me.ShowToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.ShowToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ShowToolStripMenuItem.Text = "&Show"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(100, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ExitToolStripMenuItem.Text = "&Exit"
+        Me.ExitToolStripMenuItem.Text = "E&xit"
+        '
+        'ButtonsToolStripMenuItem
+        '
+        Me.ButtonsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateToolStripMenuItem, Me.ToolStripMenuItem2, Me.RemoveToolStripMenuItem})
+        Me.ButtonsToolStripMenuItem.Name = "ButtonsToolStripMenuItem"
+        Me.ButtonsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.ButtonsToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
+        Me.ButtonsToolStripMenuItem.Text = "&Buttons"
         '
         'CreateToolStripMenuItem
         '
         Me.CreateToolStripMenuItem.Name = "CreateToolStripMenuItem"
-        Me.CreateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CreateToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.CreateToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.CreateToolStripMenuItem.Text = "&Create"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(114, 6)
         '
         'RemoveToolStripMenuItem
         '
         Me.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem"
-        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RemoveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
+        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.RemoveToolStripMenuItem.Text = "&Remove"
+        '
+        'lblCaption
+        '
+        Me.lblCaption.AutoSize = True
+        Me.lblCaption.Location = New System.Drawing.Point(122, 120)
+        Me.lblCaption.Name = "lblCaption"
+        Me.lblCaption.Size = New System.Drawing.Size(77, 13)
+        Me.lblCaption.TabIndex = 1
+        Me.lblCaption.Text = "Button Caption"
+        '
+        'lblKey
+        '
+        Me.lblKey.AutoSize = True
+        Me.lblKey.Location = New System.Drawing.Point(320, 120)
+        Me.lblKey.Name = "lblKey"
+        Me.lblKey.Size = New System.Drawing.Size(59, 13)
+        Me.lblKey.TabIndex = 2
+        Me.lblKey.Text = "Button Key"
+        '
+        'txtKey
+        '
+        Me.txtKey.Location = New System.Drawing.Point(276, 136)
+        Me.txtKey.Name = "txtKey"
+        Me.txtKey.Size = New System.Drawing.Size(142, 20)
+        Me.txtKey.TabIndex = 2
+        Me.txtKey.Text = "S16"
+        Me.txtKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtCaption
+        '
+        Me.txtCaption.Location = New System.Drawing.Point(87, 136)
+        Me.txtCaption.Name = "txtCaption"
+        Me.txtCaption.Size = New System.Drawing.Size(142, 20)
+        Me.txtCaption.TabIndex = 1
+        Me.txtCaption.Text = "First"
+        Me.txtCaption.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'FormClassCreate
         '
@@ -137,10 +142,10 @@ Partial Class FormClassCreate
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(504, 322)
         Me.ControlBox = False
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtCaption)
+        Me.Controls.Add(Me.txtKey)
+        Me.Controls.Add(Me.lblKey)
+        Me.Controls.Add(Me.lblCaption)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MainMenuStrip = Me.MenuStrip1
@@ -156,10 +161,10 @@ Partial Class FormClassCreate
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ButtonsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents lblCaption As System.Windows.Forms.Label
+    Friend WithEvents lblKey As System.Windows.Forms.Label
+    Friend WithEvents txtKey As System.Windows.Forms.TextBox
+    Friend WithEvents txtCaption As System.Windows.Forms.TextBox
     Friend WithEvents ShowToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

@@ -9,3 +9,4 @@ C:\Users\Kody\Documents\Projects\CS3340\brandk_prog01\brandk_prog01\obj\Debug\br
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog01\brandk_prog01\obj\Debug\brandk_prog01.exe
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog01\brandk_prog01\obj\Debug\brandk_prog01.xml
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog01\brandk_prog01\obj\Debug\brandk_prog01.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog01\brandk_prog01\obj\Debug\brandk_prog01.FormClassShow.resources

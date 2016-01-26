@@ -1,14 +1,15 @@
 ﻿Public Class FormClassCreate
 
-    Private Sub ButtonsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ButtonsToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
-
-    End Sub
+    Private _frmShow As FormClassShow
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-        Me.Close()
+        Application.Exit()
+
+    End Sub
+
+    Private Sub ShowToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowToolStripMenuItem.Click
+        Me.Hide()
+        FormClassShow.Show()
+
     End Sub
 End Class
