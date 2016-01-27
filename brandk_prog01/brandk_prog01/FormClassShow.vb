@@ -1,4 +1,12 @@
-﻿Public Class FormClassShow
+﻿'----------------------------------------------
+' Name: Kody Brand
+' Date: 1/27/2016
+' Description: Program1
+'              Class FormClassShow. Handles the displaying of buttons, and the changing of
+'               the font changing. Also changing between forms. 
+'----------------------------------------------
+
+Public Class FormClassShow
 
     Private Const MAX_BUTTON_COUNT As Integer = 4
     Private Const BUTTON_HEIGHT As Integer = 23
@@ -15,7 +23,7 @@
         End Set
     End Property
 
-    ' Private method
+    ' add the button to the button list
     Friend Sub addButton(ByVal theCaption As String, ByVal theKey As String)
         If theKey.Length = 0 Then
             MessageBox.Show("Must have key!")
@@ -34,6 +42,7 @@
 
     End Sub
 
+    ' removes button form button list
     Friend Sub removeButton(ByVal theKey As String)
         Dim index As Integer
         index = _allButtons.IndexOfKey(theKey)
@@ -52,6 +61,7 @@
 
     End Sub
 
+    ' Handles when the button is clicked.
     Private Sub ButtonClick(sender As Object, e As EventArgs) 'Handles aButton.Click
         Dim b As Button
         b = sender
@@ -60,20 +70,19 @@
 
     End Sub
 
+    ' handles when Exit is pressed
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Application.Exit()
     End Sub
 
+    ' Return to the main form form
     Private Sub ReturnToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReturnToolStripMenuItem.Click
         Me.Hide()
         _mainForm.Show()
         _mainForm.BringToFront()
     End Sub
 
-    Private Sub FormClassShow_FontChanged(sender As Object, e As EventArgs) Handles Me.FontChanged
-        setFont(aButton)
-    End Sub
-
+    ' Disables alt + f4
     Private Sub FormClassShow_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         If (e.CloseReason = CloseReason.UserClosing) Then
             e.Cancel = True
@@ -103,10 +112,12 @@
         Next
     End Sub
 
+    ' Event for handling form resize
     Private Sub FormClassShow_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         ArrangeButtons()
     End Sub
 
+    ' Changes the button fonts
     Private Sub ChangeFont(ByVal f As FontStyle, ByVal m As ToolStripMenuItem)
         For index As Integer = 0 To _allButtons.Count - 1 Step 1
             aButton = _allButtons.GetByIndex(index)
@@ -114,6 +125,7 @@
         Next
     End Sub
 
+    ' Sets the button font
     Private Sub setFont(ByVal b As Button)
         If menuBol.Checked Then
             b.Font = New Font(b.Font, b.Font.Style Or FontStyle.Bold)
@@ -126,16 +138,19 @@
         End If
     End Sub
 
+    ' Handles font Toggle
     Private Sub menuBol_Click(sender As Object, e As EventArgs) Handles menuBol.Click
         menuBol.Checked = Not menuBol.Checked
         ChangeFont(FontStyle.Bold, menuBol)
     End Sub
 
+    ' Handles font Toggle
     Private Sub menuIta_Click(sender As Object, e As EventArgs) Handles menuIta.Click
         menuIta.Checked = Not menuIta.Checked
         ChangeFont(FontStyle.Italic, menuIta)
     End Sub
 
+    ' Handles font Toggle
     Private Sub menuUnd_Click(sender As Object, e As EventArgs) Handles menuUnd.Click
         menuUnd.Checked = Not menuUnd.Checked
         ChangeFont(FontStyle.Underline, menuUnd)
