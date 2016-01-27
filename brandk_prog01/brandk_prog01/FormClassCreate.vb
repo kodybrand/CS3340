@@ -43,4 +43,14 @@
     Private Sub FormClassCreate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub txtKey_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtKey.KeyPress
+
+        If txtKey.TextLength >= 6 Then
+            e.Handled = True
+            MessageBox.Show("Key can have at most 6 charactors!")
+        End If
+
+    End Sub
+
 End Class
