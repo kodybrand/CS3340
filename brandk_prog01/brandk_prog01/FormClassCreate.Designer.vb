@@ -58,19 +58,19 @@ Partial Class FormClassCreate
         '
         Me.ShowToolStripMenuItem.Name = "ShowToolStripMenuItem"
         Me.ShowToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.ShowToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ShowToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.ShowToolStripMenuItem.Text = "&Show"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(100, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(140, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.ExitToolStripMenuItem.Text = "E&xit"
         '
         'ButtonsToolStripMenuItem
@@ -91,7 +91,7 @@ Partial Class FormClassCreate
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(114, 6)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(155, 6)
         '
         'RemoveToolStripMenuItem
         '
