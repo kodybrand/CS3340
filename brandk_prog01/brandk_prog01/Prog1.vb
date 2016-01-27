@@ -1,7 +1,7 @@
 ﻿Public Class Prog1
 
-    Friend _frmShow As FormClassShow
-    Friend _frmCreate As FormClassCreate
+    Public _frmShow As FormClassShow
+    Public _frmCreate As FormClassCreate
 
     Public Shared Sub main()
         Application.Run(New FormClassCreate)

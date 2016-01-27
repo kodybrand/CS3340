@@ -6,6 +6,7 @@
         InitializeComponent()
 
         _frmShow = New FormClassShow
+        _frmShow.MainForm = Me
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
@@ -31,5 +32,15 @@
 
     Private Sub RemoveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveToolStripMenuItem.Click
         _frmShow.removeButton(txtKey.Text)
+    End Sub
+
+    Private Sub FormClassCreate_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        If (e.CloseReason = CloseReason.UserClosing) Then
+            e.Cancel = True
+        End If
+    End Sub
+
+    Private Sub FormClassCreate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
