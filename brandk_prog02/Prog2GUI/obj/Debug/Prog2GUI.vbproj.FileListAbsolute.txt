@@ -1,1 +1,9 @@
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\bin\Debug\Prog2GUI.exe.config
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\obj\Debug\Prog2GUI.Resources.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\obj\Debug\Prog2GUI.vbproj.GenerateResource.Cache
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\bin\Debug\Prog2GUI.exe
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\bin\Debug\Prog2GUI.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\bin\Debug\Prog2GUI.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\obj\Debug\Prog2GUI.exe
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\obj\Debug\Prog2GUI.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\obj\Debug\Prog2GUI.pdb
