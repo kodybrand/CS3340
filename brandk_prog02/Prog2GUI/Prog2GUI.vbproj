@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0A5F955C-33E8-4C2A-8D1D-404A87EF554F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Prog2GUI.My.MyApplication</StartupObject>
+    <StartupObject>Sub Main</StartupObject>
     <RootNamespace>Prog2GUI</RootNamespace>
     <AssemblyName>Prog2GUI</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -100,6 +100,12 @@
     <Compile Include="Prog2.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormClassHouse.resx">
+      <DependentUpon>FormClassHouse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClassList.resx">
+      <DependentUpon>FormClassList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

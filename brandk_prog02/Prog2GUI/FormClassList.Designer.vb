@@ -22,8 +22,16 @@ Partial Class FormClassList
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.SuspendLayout()
+        '
+        'FormClassList
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Text = "FormClassList"
+        Me.ClientSize = New System.Drawing.Size(644, 352)
+        Me.Name = "FormClassList"
+        Me.Text = "Program02 Kody Brand"
+        Me.ResumeLayout(False)
+
     End Sub
 End Class
