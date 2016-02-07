@@ -7,3 +7,9 @@ C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\bin\Debug\Prog2GU
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\obj\Debug\Prog2GUI.exe
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\obj\Debug\Prog2GUI.xml
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\obj\Debug\Prog2GUI.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\obj\Debug\Prog2GUI.FormClassHouse.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\obj\Debug\Prog2GUI.FormClassList.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\bin\Debug\HouseClasses.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\bin\Debug\HouseClasses.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\bin\Debug\HouseClasses.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\Prog2GUI\obj\Debug\Prog2GUI.vbprojResolveAssemblyReference.cache
