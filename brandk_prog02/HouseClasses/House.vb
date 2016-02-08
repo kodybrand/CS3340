@@ -116,10 +116,8 @@ Public MustInherit Class House
 
     End Sub
 
-
-
-
     Public Event PriceChanged()
+
 
 
 
