@@ -1,4 +1,9 @@
-﻿Public MustInherit Class House
+﻿Imports System.Text.RegularExpressions
+
+Public MustInherit Class House
+
+    Private zero As Integer = 0
+
 
     Protected _type As String
     Protected _ID As String
@@ -17,11 +22,28 @@
 
     ' Constructor
     Public Sub New(ByVal aID As String)
-        _ID = aID
-        AllHouses.Add(Me)
+        If Not aID.Length = 5 Then
+            Throw New Exception("ID must have exactly five characters!")
+        Else
+            If Not (Regex.IsMatch(aID, "[A-Za-z0-9]")) Then
+                Throw New Exception("Each character of ID must be a digit or letter!")
+            Else
+                For index As Integer = 0 To AllHouses.Count - 1
+                    If Not AllHouses.Count = 0 Then
+                        If (aID = AllHouses(index)._ID) Then
+
+                            Throw New Exception("ID must be unique!")
+                        End If
+                    End If
+                Next
+                _ID = aID
+                AllHouses.Add(Me)
+
+            End If
+        End If
     End Sub
 
-    Public Shared ReadOnly Property TotalCount()
+    Public Shared ReadOnly Property TotalCount() As Integer
         Get
             Return AllHouses.Count
         End Get
@@ -78,7 +100,19 @@
 
     End Sub
 
+    ' Returns the house at the specified index.
+    Public Shared ReadOnly Property HouseByIndex(ByVal index As Integer) As House
+        Get
+            Return AllHouses(index)
+        End Get
+    End Property
+
     Private Sub setPrice()
+        Dim num As Double = _price
+        _price = (_basePrice + (_rooms - _minRooms * _extraRoomPrice) + (_garages - _minGarage * _extraGaragePrice))
+        If Not num.Equals(_price) Then
+            'Send Price Changed Message!
+        End If
 
     End Sub
 
