@@ -1,21 +1,20 @@
 ﻿Public Class Madison
     Inherits House
 
+    Private Const HOUSE_TYPE As String = "Madison"
+    Private Const MAX_ROOMS As Integer = 4
+    Private Const MIN_ROOMS As Integer = 2
+    Private Const MAX_GARAGE As Integer = 2
+    Private Const MIN_GARAGE As Integer = 1
+    Private Const BASE_PRICE As Integer = 300000
+    Private Const EXTRA_ROOM As Integer = 10000
+    Private Const EXTRA_GARAGE As Integer = 5000
+    Private rooms As Integer = MIN_ROOMS
+    Private garages As Integer = MIN_GARAGE
+    Private price As Integer = BASE_PRICE
+
     Public Sub New(ByVal aID As String)
         MyBase.New(aID)
-        _type = "Madison"
-        _maxRooms = 4
-        _minRooms = 2
-        _maxGarage = 3
-        _minGarage = 1
-        _basePrice = 300000
-        _extraRoomPrice = 10000
-        _extraGaragePrice = 5000
-        _rooms = _minRooms
-        _garages = _minGarage
-        _price = _basePrice
     End Sub
-
-
 
 End Class

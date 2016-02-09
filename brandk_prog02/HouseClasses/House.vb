@@ -107,7 +107,7 @@ Public MustInherit Class House
         End Get
     End Property
 
-    Private Sub setPrice()
+    Public Sub setPrice()
         Dim num As Double = _price
         _price = (_basePrice + (_rooms - _minRooms * _extraRoomPrice) + (_garages - _minGarage * _extraGaragePrice))
         If Not num.Equals(_price) Then
