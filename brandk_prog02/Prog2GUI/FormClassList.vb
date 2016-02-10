@@ -20,9 +20,7 @@ Public Class FormClassList
         If lstHouses.SelectedIndex = -1 Then
             MessageBox.Show("No house selected!")
         Else
-            'Clicking btnDisplay will hide the form, show _mainForm with the data 
-            'of the selected house, and _mainForm will be ready
-            'for user to modify the selected house.
+            _mainForm.showSelectedHouse(listHouses.SelectedIndex)
             Me.Hide()
             _mainForm.Show()
             _mainForm.BringToFront()

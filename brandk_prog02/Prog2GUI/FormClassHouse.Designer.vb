@@ -30,7 +30,7 @@ Partial Class FormClassHouse
         Me.gbRooms = New System.Windows.Forms.GroupBox()
         Me.rbRooms3 = New System.Windows.Forms.RadioButton()
         Me.rbRooms2 = New System.Windows.Forms.RadioButton()
-        Me.rbRoom4 = New System.Windows.Forms.RadioButton()
+        Me.rbRooms4 = New System.Windows.Forms.RadioButton()
         Me.gbGarages = New System.Windows.Forms.GroupBox()
         Me.rbGarages2 = New System.Windows.Forms.RadioButton()
         Me.rbGarages1 = New System.Windows.Forms.RadioButton()
@@ -94,7 +94,7 @@ Partial Class FormClassHouse
         '
         Me.gbRooms.Controls.Add(Me.rbRooms3)
         Me.gbRooms.Controls.Add(Me.rbRooms2)
-        Me.gbRooms.Controls.Add(Me.rbRoom4)
+        Me.gbRooms.Controls.Add(Me.rbRooms4)
         Me.gbRooms.Enabled = False
         Me.gbRooms.Location = New System.Drawing.Point(310, 112)
         Me.gbRooms.Name = "gbRooms"
@@ -129,18 +129,18 @@ Partial Class FormClassHouse
         Me.rbRooms2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.rbRooms2.UseVisualStyleBackColor = True
         '
-        'rbRoom4
+        'rbRooms4
         '
-        Me.rbRoom4.AutoSize = True
-        Me.rbRoom4.CheckAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.rbRoom4.Location = New System.Drawing.Point(40, 42)
-        Me.rbRoom4.Name = "rbRoom4"
-        Me.rbRoom4.Size = New System.Drawing.Size(17, 30)
-        Me.rbRoom4.TabIndex = 0
-        Me.rbRoom4.TabStop = True
-        Me.rbRoom4.Text = "4"
-        Me.rbRoom4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.rbRoom4.UseVisualStyleBackColor = True
+        Me.rbRooms4.AutoSize = True
+        Me.rbRooms4.CheckAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.rbRooms4.Location = New System.Drawing.Point(40, 42)
+        Me.rbRooms4.Name = "rbRooms4"
+        Me.rbRooms4.Size = New System.Drawing.Size(17, 30)
+        Me.rbRooms4.TabIndex = 0
+        Me.rbRooms4.TabStop = True
+        Me.rbRooms4.Text = "4"
+        Me.rbRooms4.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.rbRooms4.UseVisualStyleBackColor = True
         '
         'gbGarages
         '
@@ -278,7 +278,7 @@ Partial Class FormClassHouse
     Friend WithEvents gbRooms As System.Windows.Forms.GroupBox
     Friend WithEvents rbRooms3 As System.Windows.Forms.RadioButton
     Friend WithEvents rbRooms2 As System.Windows.Forms.RadioButton
-    Friend WithEvents rbRoom4 As System.Windows.Forms.RadioButton
+    Friend WithEvents rbRooms4 As System.Windows.Forms.RadioButton
     Friend WithEvents gbGarages As System.Windows.Forms.GroupBox
     Friend WithEvents rbGarages2 As System.Windows.Forms.RadioButton
     Friend WithEvents rbGarages1 As System.Windows.Forms.RadioButton

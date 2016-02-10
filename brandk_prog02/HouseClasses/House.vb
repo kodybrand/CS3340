@@ -4,7 +4,6 @@ Public MustInherit Class House
 
     Private zero As Integer = 0
 
-
     Protected _type As String
     Protected _ID As String
     Protected _rooms As Integer
@@ -14,9 +13,13 @@ Public MustInherit Class House
     Protected _minRooms As Integer
     Protected _maxGarage As Integer
     Protected _minGarage As Integer
-    Protected _basePrice As Double
-    Protected _extraRoomPrice As Integer
-    Protected _extraGaragePrice As Integer
+    Private _basePrice As Double
+    Private _extraRoomPrice As Integer
+    Private _extraGaragePrice As Integer
+
+    'string formatting constants
+    Private Const COL_1 As String = "{0,-5}", COL_2 = "{0,15}", COL_3 = "{0,12}"
+    Private Const CURRENCY As String = "{0:c0}"
 
     Protected Shared AllHouses As List(Of House) = New List(Of House)
 
@@ -111,14 +114,18 @@ Public MustInherit Class House
         Dim num As Double = _price
         _price = (_basePrice + (_rooms - _minRooms * _extraRoomPrice) + (_garages - _minGarage * _extraGaragePrice))
         If Not num.Equals(_price) Then
-            'Send Price Changed Message!
+            RaisePriceChangedEvent()
         End If
 
     End Sub
 
+    ' Raised when the price of the house chages.
     Public Event PriceChanged()
 
-
+    'allows subs to raise PriceChanged event
+    Protected Sub RaisePriceChangedEvent()
+        RaiseEvent PriceChanged()
+    End Sub
 
 
 End Class
