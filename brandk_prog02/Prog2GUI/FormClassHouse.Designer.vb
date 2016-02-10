@@ -232,7 +232,7 @@ Partial Class FormClassHouse
         'txtPrice
         '
         Me.txtPrice.BackColor = System.Drawing.SystemColors.Window
-        Me.txtPrice.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtPrice.ForeColor = System.Drawing.Color.Black
         Me.txtPrice.Location = New System.Drawing.Point(93, 272)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.ReadOnly = True

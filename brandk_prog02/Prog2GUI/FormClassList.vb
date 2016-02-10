@@ -20,19 +20,23 @@ Public Class FormClassList
         If lstHouses.SelectedIndex = -1 Then
             MessageBox.Show("No house selected!")
         Else
-            _mainForm.showSelectedHouse(listHouses.SelectedIndex)
-            Me.Hide()
-            _mainForm.Show()
-            _mainForm.BringToFront()
+            _mainForm.displaySelectedHouse(lstHouses.SelectedIndex)
         End If
     End Sub
 
     Private Sub FormClassList_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         txtHouseCount.Text = House.TotalCount
+        populateList()
     End Sub
 
-    Private Sub FormClassList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim bs As New BindingSource
-        'bs.DataSource = House.
+    Private Sub populateList()
+        Dim tmphouse As House
+        Dim tmpList As List(Of String) = New List(Of String)
+        lstHouses.Items.Clear()
+        For i = 0 To House.TotalCount - 1
+            tmphouse = House.HouseByIndex(i)
+            lstHouses.Items.Add(tmphouse.ToString)
+        Next
     End Sub
+
 End Class

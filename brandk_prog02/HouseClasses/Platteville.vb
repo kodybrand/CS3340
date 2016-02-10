@@ -9,12 +9,11 @@
     Private Const BASE_PRICE As Integer = 200000
     Private Const EXTRA_ROOM As Integer = 8000
     Private Const EXTRA_GARAGE As Integer = 2500
-    Private rooms As Integer = MIN_ROOMS
-    Private garages As Integer = MIN_GARAGE
-    Private price As Integer = BASE_PRICE
+
 
     Public Sub New(ByVal aID As String)
-        MyBase.New(aID)
+        MyBase.New(aID, HOUSE_TYPE, EXTRA_ROOM, MIN_ROOMS, MAX_ROOMS, _
+                   EXTRA_GARAGE, MIN_GARAGE, MAX_GARAGE, BASE_PRICE)
     End Sub
 
 End Class
