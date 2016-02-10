@@ -1,4 +1,12 @@
-﻿Imports UWPCS3340
+﻿'----------------------------------------------
+' Name: Kody Brand
+' Date: 2/05/2016
+' Description: Program2
+'              Class FormClassHouse
+'       Holds all the methods and functions for the House Form.
+'----------------------------------------------
+
+Imports UWPCS3340
 
 Public Class FormClassHouse
 
@@ -18,16 +26,19 @@ Public Class FormClassHouse
         _frmList.MainForm = Me
     End Sub
 
+    'Close Application
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
     End Sub
 
+    'Goes to list form
     Private Sub btnList_Click(sender As Object, e As EventArgs) Handles btnList.Click
         Me.Hide()
         _frmList.Show()
         _frmList.BringToFront()
     End Sub
 
+    'Created a class if acceptable and also allows saving
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If Not editingMode Then
             Try
@@ -50,6 +61,7 @@ Public Class FormClassHouse
         End If
     End Sub
 
+    'Sets up for Edit
     Private Sub EditMode()
         editingMode = True
         btnSave.Text = "New"
@@ -61,6 +73,7 @@ Public Class FormClassHouse
         gbGarages.Enabled = True
     End Sub
 
+    'Sets up for New
     Private Sub StopEdit()
         editingMode = False
         btnSave.Text = "Save"
@@ -83,6 +96,7 @@ Public Class FormClassHouse
         MessageBox.Show("Price has been changed!")
     End Sub
 
+    'gets the House by ID
     Private Function getHouseFromID() As House
         Dim idList As List(Of String) = New List(Of String)
         For i = 0 To House.TotalCount - 1
@@ -92,6 +106,7 @@ Public Class FormClassHouse
 
     End Function
 
+    'Displays for the current house
     Public Sub displaySelectedHouse(ByVal index As Integer)
         EditMode()
         _currHouse = House.HouseByIndex(index)
@@ -105,7 +120,7 @@ Public Class FormClassHouse
         Me.Show()
     End Sub
 
-    'selects proper radio button for number of rooms in house
+    'selects radio button for number of rooms in house
     Private Sub showNumRooms(ByVal tmpHouse As House)
         If tmpHouse.Rooms = Integer.Parse(rbRooms4.Text) Then
             rbRooms4.Select()
@@ -116,7 +131,7 @@ Public Class FormClassHouse
         End If
     End Sub
 
-    'selects proper radio button for number of garages in house
+    'selects radio button for number of garages in house
     Private Sub showNumGarages(ByVal tmpHouse As House)
         If tmpHouse.Garages = Integer.Parse(rbGarages3.Text) Then
             rbGarages3.Select()
@@ -127,6 +142,7 @@ Public Class FormClassHouse
         End If
     End Sub
 
+    'Modify button for selected
     Private Sub btnModify_Click(sender As Object, e As EventArgs) Handles btnModify.Click
         Try
             _currHouse = getHouseFromID()
@@ -136,27 +152,29 @@ Public Class FormClassHouse
         End Try
         
     End Sub
-
+    'sets room number
     Private Sub rbRooms4_CheckedChanged(sender As Object, e As EventArgs) Handles rbRooms4.CheckedChanged
         chgRooms = 4
     End Sub
-
+    'sets room number
     Private Sub rbRooms3_CheckedChanged(sender As Object, e As EventArgs) Handles rbRooms3.CheckedChanged
         chgRooms = 3
     End Sub
-
+    'sets room number
     Private Sub rbRooms2_CheckedChanged(sender As Object, e As EventArgs) Handles rbRooms2.CheckedChanged
         chgRooms = 2
     End Sub
-
+    'sets garage number
     Private Sub rbGarages3_CheckedChanged(sender As Object, e As EventArgs) Handles rbGarages3.CheckedChanged
         chgGarages = 3
     End Sub
 
+    'sets garage number
     Private Sub rbGarages2_CheckedChanged(sender As Object, e As EventArgs) Handles rbGarages2.CheckedChanged
         chgGarages = 2
     End Sub
 
+    'sets garage number
     Private Sub rbGarages1_CheckedChanged(sender As Object, e As EventArgs) Handles rbGarages1.CheckedChanged
         chgGarages = 1
     End Sub

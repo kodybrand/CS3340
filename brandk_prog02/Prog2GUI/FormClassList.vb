@@ -1,4 +1,11 @@
-﻿Imports UWPCS3340
+﻿'----------------------------------------------
+' Name: Kody Brand
+' Date: 2/05/2016
+' Description: Program2
+'              Class FormClassList
+'       Holds all the methods and functions for the List Form.
+'----------------------------------------------
+Imports UWPCS3340
 
 Public Class FormClassList
 
@@ -10,12 +17,14 @@ Public Class FormClassList
         End Set
     End Property
 
+    'Shows form and hides this one
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnOK.Click
         Me.Hide()
         _mainForm.Show()
         _mainForm.BringToFront()
     End Sub
 
+    'Sends selected object to other form
     Private Sub btnDisplay_Click(sender As Object, e As EventArgs) Handles btnDisplay.Click
         If lstHouses.SelectedIndex = -1 Then
             MessageBox.Show("No house selected!")
@@ -24,11 +33,13 @@ Public Class FormClassList
         End If
     End Sub
 
+    'Sets up when loaded
     Private Sub FormClassList_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         txtHouseCount.Text = House.TotalCount
         populateList()
     End Sub
 
+    'Populates the list
     Private Sub populateList()
         Dim tmphouse As House
         Dim tmpList As List(Of String) = New List(Of String)

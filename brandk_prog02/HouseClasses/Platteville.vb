@@ -1,4 +1,11 @@
-﻿Public Class Platteville
+﻿'----------------------------------------------
+' Name: Kody Brand
+' Date: 2/05/2016
+' Description: Program2
+'              Class Platteville
+'       Object class for Platteville
+'----------------------------------------------
+Public Class Platteville
     Inherits House
 
     Private Const HOUSE_TYPE As String = "Platteville"
@@ -10,7 +17,7 @@
     Private Const EXTRA_ROOM As Integer = 8000
     Private Const EXTRA_GARAGE As Integer = 2500
 
-
+    'Constructor
     Public Sub New(ByVal aID As String)
         MyBase.New(aID, HOUSE_TYPE, EXTRA_ROOM, MIN_ROOMS, MAX_ROOMS, _
                    EXTRA_GARAGE, MIN_GARAGE, MAX_GARAGE, BASE_PRICE)

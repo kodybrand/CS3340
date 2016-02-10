@@ -1,4 +1,11 @@
-﻿Public Class Chicago
+﻿'----------------------------------------------
+' Name: Kody Brand
+' Date: 2/05/2016
+' Description: Program2
+'              Class Chicago
+'       Object class for Chicago
+'----------------------------------------------
+Public Class Chicago
     Inherits House
 
     Private Const HOUSE_TYPE As String = "Chicago"

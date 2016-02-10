@@ -1,4 +1,11 @@
-﻿Public Class Madison
+﻿'----------------------------------------------
+' Name: Kody Brand
+' Date: 2/05/2016
+' Description: Program2
+'              Class Madison
+'       Object class for Madison
+'----------------------------------------------
+Public Class Madison
     Inherits House
 
     Private Const HOUSE_TYPE As String = "Madison"
@@ -10,6 +17,7 @@
     Private Const EXTRA_ROOM As Integer = 10000
     Private Const EXTRA_GARAGE As Integer = 5000
 
+    'Constructor
     Public Sub New(ByVal aID As String)
         MyBase.New(aID, HOUSE_TYPE, EXTRA_ROOM, MIN_ROOMS, MAX_ROOMS, _
                    EXTRA_GARAGE, MIN_GARAGE, MAX_GARAGE, BASE_PRICE)

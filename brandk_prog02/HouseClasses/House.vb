@@ -1,4 +1,11 @@
-﻿Imports System.Text.RegularExpressions
+﻿'----------------------------------------------
+' Name: Kody Brand
+' Date: 2/05/2016
+' Description: Program2
+'              Class House
+'       Abstract class for house
+'----------------------------------------------
+Imports System.Text.RegularExpressions
 
 Public MustInherit Class House
 
@@ -59,6 +66,7 @@ Public MustInherit Class House
         End If
     End Sub
 
+    'Modifys the object when changed
     Public Sub Modify(ByVal numRooms As Integer, ByVal numGarages As Integer)
         Dim flag As Boolean = False
         Dim message As String = ""
@@ -81,6 +89,7 @@ Public MustInherit Class House
 
     End Sub
 
+    'Sets the price
     Overridable Sub setPrice()
         Dim newPrice As Integer
 
@@ -145,7 +154,7 @@ Public MustInherit Class House
     End Property
 
     ' --- Events
-    ' Raised when the price of the house chages.
+    ' Raised when the price of the house chages
     Public Event PriceChanged()
 
     'allows subs to raise PriceChanged event
