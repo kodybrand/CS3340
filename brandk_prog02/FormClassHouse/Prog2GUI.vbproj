@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0A5F955C-33E8-4C2A-8D1D-404A87EF554F}</ProjectGuid>
+    <ProjectGuid>{26482D9E-5590-464B-8290-F91A6A263A22}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>Sub Main</StartupObject>
-    <RootNamespace>Prog2GUI</RootNamespace>
-    <AssemblyName>Prog2GUI</AssemblyName>
+    <RootNamespace>FormClassHouse</RootNamespace>
+    <AssemblyName>FormClassHouse</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -20,7 +20,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Prog2GUI.xml</DocumentationFile>
+    <DocumentationFile>FormClassHouse.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -30,7 +30,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Prog2GUI.xml</DocumentationFile>
+    <DocumentationFile>FormClassHouse.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -127,7 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HouseClasses\HouseClasses.vbproj">
-      <Project>{36ef0c83-9b80-46f5-8d4f-72210be9a68c}</Project>
+      <Project>{02e50fa9-fe9e-42dd-8574-859273a98c63}</Project>
       <Name>HouseClasses</Name>
     </ProjectReference>
   </ItemGroup>

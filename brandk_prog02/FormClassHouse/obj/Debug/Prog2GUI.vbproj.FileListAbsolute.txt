@@ -1,0 +1,15 @@
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\bin\Debug\FormClassHouse.exe.config
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\bin\Debug\FormClassHouse.exe
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\bin\Debug\FormClassHouse.pdb
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\bin\Debug\FormClassHouse.xml
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\bin\Debug\HouseClasses.dll
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\bin\Debug\HouseClasses.pdb
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\bin\Debug\HouseClasses.xml
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\obj\Debug\Prog2GUI.vbprojResolveAssemblyReference.cache
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.Resources.resources
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\obj\Debug\Prog2GUI.vbproj.GenerateResource.Cache
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.exe
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.xml
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.pdb
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.FormClassHouse.resources
+C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.FormClassList.resources

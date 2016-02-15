@@ -5,39 +5,34 @@
 '              Class Chicago
 '       Object class for Chicago
 '----------------------------------------------
-Public Class Chicago
-    Inherits House
+Public Class Chicago : Inherits House
 
-    Private Const HOUSE_TYPE As String = "Chicago"
-    Private Const MAX_ROOMS As Integer = 4
-    Private Const MIN_ROOMS As Integer = 3
-    Private Const MAX_GARAGE As Integer = 3
-    Private Const MIN_GARAGE As Integer = 2
-    Private Const BASE_PRICE As Integer = 400000
-    Private Const EXTRA_ROOM As Integer = 20000
-    Private Const EXTRA_GARAGE As Integer = 8000
-
+    ' Constructor
     Public Sub New(ByVal aID As String)
-        MyBase.New(aID, HOUSE_TYPE, EXTRA_ROOM, MIN_ROOMS, MAX_ROOMS, _
-                   EXTRA_GARAGE, MIN_GARAGE, MAX_GARAGE, BASE_PRICE)
+        MyBase.New(aID)
+        Me._TYPE = "Chicago"
+        Me._MAX_ROOMS = 4
+        Me._MIN_ROOMS = 3
+        Me._MAX_GARAGES = 3
+        Me._MIN_GARAGES = 2
+        Me._BASE_PRICE = 400000
+        Me._EXTRA_ROOM = 20000
+        Me._EXTRA_GARAGE = 8000
+        Me._rooms = Me._MIN_ROOMS
+        Me._garages = Me._MIN_GARAGES
+        Me._price = Me._BASE_PRICE
     End Sub
 
-    Public Overrides Sub setPrice()
-        Dim tmp As Single = _price
-        If (_rooms = MAX_ROOMS And _garages = MAX_GARAGE) Then
-            _price = BASE_PRICE + EXTRA_ROOM + EXTRA_GARAGE
-        ElseIf (_rooms = MAX_ROOMS And _garages = MIN_GARAGE) Then
-            _price = BASE_PRICE + EXTRA_ROOM
-        ElseIf (_rooms = MIN_ROOMS + MAX_GARAGE) Then
-            _price = BASE_PRICE + 10000
-        Else
-            _price = BASE_PRICE
+    ' Overided setPrice
+    Protected Overrides Sub setPrice()
+        Dim tmp As Integer = Me._price
+        Me._price = Me._BASE_PRICE + ((Me._rooms - Me._MIN_ROOMS) * Me._EXTRA_ROOM) + ((Me._garages - Me._MIN_GARAGES) * Me._EXTRA_GARAGE)
+        If (Me._rooms = 3 And Me._garages = 3) Then
+            Me._price = Me._price + 2000
         End If
-
-        RaisePriceChangedEvent()
-
-
+        If tmp <> Me._price Then
+            RaisePriceChangedEvent()
+        End If
     End Sub
-
 
 End Class

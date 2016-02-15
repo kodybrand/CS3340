@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Prog2GUI")> 
+<Assembly: AssemblyTitle("FormClassHouse")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("Prog2GUI")> 
+<Assembly: AssemblyProduct("FormClassHouse")> 
 <Assembly: AssemblyCopyright("Copyright ©  2016")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("ae4259c7-7aa8-4870-a9c0-63629265b9fb")> 
+<Assembly: Guid("8ada94b5-5c3f-4933-8de1-251ddb40e018")> 
 
 ' Version information for an assembly consists of the following four values:
 '

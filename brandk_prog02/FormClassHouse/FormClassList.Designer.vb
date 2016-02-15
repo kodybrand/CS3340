@@ -34,7 +34,7 @@ Partial Class FormClassList
         Me.lstHouses.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstHouses.FormattingEnabled = True
         Me.lstHouses.ItemHeight = 16
-        Me.lstHouses.Location = New System.Drawing.Point(40, 151)
+        Me.lstHouses.Location = New System.Drawing.Point(178, 114)
         Me.lstHouses.Name = "lstHouses"
         Me.lstHouses.Size = New System.Drawing.Size(277, 100)
         Me.lstHouses.TabIndex = 0
@@ -42,24 +42,22 @@ Partial Class FormClassList
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(184, 51)
+        Me.Label1.Location = New System.Drawing.Point(198, 78)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(122, 13)
+        Me.Label1.Size = New System.Drawing.Size(133, 13)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Total Number of Houses"
+        Me.Label1.Text = "Total Number Of Houses : "
         '
         'txtHouseCount
         '
-        Me.txtHouseCount.BackColor = System.Drawing.SystemColors.Window
-        Me.txtHouseCount.Location = New System.Drawing.Point(336, 48)
+        Me.txtHouseCount.Location = New System.Drawing.Point(339, 75)
         Me.txtHouseCount.Name = "txtHouseCount"
-        Me.txtHouseCount.ReadOnly = True
         Me.txtHouseCount.Size = New System.Drawing.Size(100, 20)
         Me.txtHouseCount.TabIndex = 2
         '
         'btnDisplay
         '
-        Me.btnDisplay.Location = New System.Drawing.Point(472, 151)
+        Me.btnDisplay.Location = New System.Drawing.Point(178, 234)
         Me.btnDisplay.Name = "btnDisplay"
         Me.btnDisplay.Size = New System.Drawing.Size(75, 23)
         Me.btnDisplay.TabIndex = 3
@@ -68,7 +66,7 @@ Partial Class FormClassList
         '
         'btnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(472, 223)
+        Me.btnOK.Location = New System.Drawing.Point(379, 233)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(75, 23)
         Me.btnOK.TabIndex = 4
@@ -87,8 +85,7 @@ Partial Class FormClassList
         Me.Controls.Add(Me.lstHouses)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormClassList"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "All Houses (Kody Brand)"
+        Me.Text = "All Houses ( Kody Brand )"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

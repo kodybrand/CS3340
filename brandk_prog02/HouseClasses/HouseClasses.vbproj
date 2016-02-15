@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36EF0C83-9B80-46F5-8D4F-72210BE9A68C}</ProjectGuid>
+    <ProjectGuid>{02E50FA9-FE9E-42DD-8574-859273A98C63}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>UWPCS3340</RootNamespace>
     <AssemblyName>HouseClasses</AssemblyName>

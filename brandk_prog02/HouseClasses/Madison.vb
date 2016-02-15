@@ -5,22 +5,23 @@
 '              Class Madison
 '       Object class for Madison
 '----------------------------------------------
-Public Class Madison
-    Inherits House
+Public Class Madison : Inherits House
 
-    Private Const HOUSE_TYPE As String = "Madison"
-    Private Const MAX_ROOMS As Integer = 4
-    Private Const MIN_ROOMS As Integer = 2
-    Private Const MAX_GARAGE As Integer = 2
-    Private Const MIN_GARAGE As Integer = 1
-    Private Const BASE_PRICE As Integer = 300000
-    Private Const EXTRA_ROOM As Integer = 10000
-    Private Const EXTRA_GARAGE As Integer = 5000
-
-    'Constructor
+    ' Constructor 
     Public Sub New(ByVal aID As String)
-        MyBase.New(aID, HOUSE_TYPE, EXTRA_ROOM, MIN_ROOMS, MAX_ROOMS, _
-                   EXTRA_GARAGE, MIN_GARAGE, MAX_GARAGE, BASE_PRICE)
+        MyBase.New(aID)
+        Me._TYPE = "Madison"
+        Me._MAX_ROOMS = 4
+        Me._MIN_ROOMS = 2
+        Me._MAX_GARAGES = 3
+        Me._MIN_GARAGES = 1
+        Me._BASE_PRICE = 300000
+        Me._EXTRA_ROOM = 10000
+        Me._EXTRA_GARAGE = 5000
+        Me._rooms = Me._MIN_ROOMS
+        Me._garages = Me._MIN_GARAGES
+        Me._price = Me._BASE_PRICE
+
     End Sub
 
 End Class

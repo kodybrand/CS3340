@@ -9,152 +9,120 @@ Imports System.Text.RegularExpressions
 
 Public MustInherit Class House
 
-    Private zero As Integer = 0
-
-    Protected _type As String
-    Protected _ID As String
-    Protected _rooms As Integer
-    Protected _garages As Integer
-    Protected _price As Single
-    Protected _maxRooms As Integer
-    Protected _minRooms As Integer
-    Protected _maxGarage As Integer
-    Protected _minGarage As Integer
-    Private _basePrice As Double
-    Private _extraRoomPrice As Integer
-    Private _extraGaragePrice As Integer
-
-    'string formatting constants
-    Private Const COL_1 As String = "{0,-5}", COL_2 = "{0,15}", COL_3 = "{0,12}"
-    Private Const CURRENCY As String = "{0:c0}"
-
     Protected Shared AllHouses As List(Of House) = New List(Of House)
 
+    Protected _TYPE As String
+    Protected _ID As String
+    Protected _MAX_ROOMS As Integer
+    Protected _MIN_ROOMS As Integer
+    Protected _MAX_GARAGES As Integer
+    Protected _MIN_GARAGES As Integer
+    Protected _BASE_PRICE As Integer
+    Protected _EXTRA_ROOM As Integer
+    Protected _EXTRA_GARAGE As Integer
+    Protected _rooms As Integer
+    Protected _garages As Integer
+    Protected _price As Integer
+    Private _aID As String
+
     ' Constructor
-    Public Sub New(ByVal aID As String, ByVal type As String, ByVal roomPrice As Single, _
-                   ByVal minRooms As Integer, ByVal maxRooms As Integer, ByVal garagePrice As Single, _
-                   ByVal minGarages As Integer, ByVal maxGarages As Integer, basePrice As Single)
+    Public Sub New(ByVal aID As String)
+        For Each House In AllHouses
+            If House._ID = aID Then
+                Throw New Exception("ID must be unique!")
+            End If
+        Next
         If Not aID.Length = 5 Then
             Throw New Exception("ID must have exactly five characters!")
-        Else
-            If Not (Regex.IsMatch(aID, "[A-Za-z0-9]")) Then
-                Throw New Exception("Each character of ID must be a digit or letter!")
-            Else
-                Dim tmphouse As House
-                For index As Integer = 0 To AllHouses.Count - 1
-                    If Not AllHouses.Count = 0 Then
-                        If (aID = AllHouses(index)._ID) Then
-                            tmphouse = HouseByIndex(index)
-                            Throw New Exception("ID must be unique!")
-                        End If
-                    End If
-                Next
-                _ID = aID
-                _type = type
-                _basePrice = roomPrice
-                _minRooms = minRooms
-                _maxRooms = maxRooms
-                _rooms = minRooms
-                _extraGaragePrice = garagePrice
-                _minGarage = minGarages
-                _maxGarage = maxGarages
-                _garages = minGarages
-                _basePrice = basePrice
-                _price = basePrice
-                AllHouses.Add(Me)
-            End If
         End If
+        If Not (Regex.IsMatch(aID, "[A-Za-z0-9]")) Then
+            Throw New Exception("Each character of ID must be a digit or letter!")
+        End If
+        Me._ID = aID
+        AllHouses.Add(Me)
     End Sub
 
-    'Modifys the object when changed
+    ' Sets the modifications of numbers have been updated.
     Public Sub Modify(ByVal numRooms As Integer, ByVal numGarages As Integer)
         Dim flag As Boolean = False
         Dim message As String = ""
 
-        If (numRooms < _minRooms Or numRooms > _maxRooms) Then
+        If numRooms < Me._MIN_ROOMS Or numRooms > Me._MAX_ROOMS Then
             message = "Number of rooms is out of range!\r\n"
             flag = True
         End If
-
-        If (numGarages < _minGarage Or numGarages > _maxGarage) Then
-            message += "Number of garages is out of range!"
+        If numGarages < Me._MIN_GARAGES Or numGarages > Me._MAX_GARAGES Then
+            message = "Number of garages is out of range!"
             flag = True
         End If
-        If (flag) Then
+        If flag = True Then
             Throw New Exception(message)
         End If
-        _rooms = numRooms
-        _garages = numGarages
+        Me._garages = numGarages
+        Me._rooms = numRooms
         setPrice()
-
     End Sub
 
-    'Sets the price
-    Overridable Sub setPrice()
-        Dim newPrice As Integer
-
-        newPrice = _basePrice + (_extraRoomPrice * (_rooms - _minRooms)) + (_extraGaragePrice * (_garages - _minGarage))
-        If _price <> newPrice Then
-            _price = newPrice
+    Protected Overridable Sub setPrice()
+        Dim tmp As Integer = Me._price
+        Me._price = Me._BASE_PRICE + ((Me._rooms - Me._MIN_ROOMS) * Me._EXTRA_ROOM) _
+            + ((Me._garages - Me._MIN_GARAGES) * Me._EXTRA_GARAGE)
+        If tmp <> Me._price Then
             RaisePriceChangedEvent()
         End If
+
     End Sub
 
     ' Returns the house at the specified index.
     Public Shared ReadOnly Property HouseByIndex(ByVal index As Integer) As House
         Get
-            Return AllHouses(index)
+            Return House.AllHouses(index)
         End Get
     End Property
 
+    ' Returns house type
+    Public ReadOnly Property Type As String
+        Get
+            Return Me._TYPE
+        End Get
+    End Property
 
-    ' -- ToString
-    'returns formatted string representation of house
-    Overrides Function toString() As String
-        Return String.Format(COL_1, _ID) & String.Format(COL_2, _type) & _
-            String.Format(COL_3, String.Format(CURRENCY, _price))
-    End Function
+    ' Returns house ID
+    Public ReadOnly Property ID As String
+        Get
+            Return Me._ID
+        End Get
+    End Property
 
-    ' --- Gets
+    ' Returns house Rooms
+    Public ReadOnly Property Rooms As Integer
+        Get
+            Return Me._rooms
+        End Get
+    End Property
 
-    Public Shared ReadOnly Property TotalCount() As Integer
+    ' Returns house Garages
+    Public ReadOnly Property Garages As Integer
+        Get
+            Return Me._garages
+        End Get
+    End Property
+
+    ' Returns house Price
+    Public ReadOnly Property Price As Single
+        Get
+            Return Me._price
+        End Get
+    End Property
+
+    ' Returns the total count of house objects to be built.
+    Public Shared ReadOnly Property TotalCount As Integer
         Get
             Return AllHouses.Count
         End Get
     End Property
 
-    Public ReadOnly Property Type As String
-        Get
-            Return _type
-        End Get
-    End Property
-
-    Public ReadOnly Property ID As String
-        Get
-            Return _ID
-        End Get
-    End Property
-
-    Public ReadOnly Property Rooms As Integer
-        Get
-            Return _rooms
-        End Get
-    End Property
-
-    Public ReadOnly Property Garages As Integer
-        Get
-            Return _garages
-        End Get
-    End Property
-
-    Public ReadOnly Property Price As Single
-        Get
-            Return _price
-        End Get
-    End Property
-
-    ' --- Events
-    ' Raised when the price of the house chages
+    ' Raised when the price of the house changes.
     Public Event PriceChanged()
 
     'allows subs to raise PriceChanged event

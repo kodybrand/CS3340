@@ -2,20 +2,20 @@
 <doc>
 <assembly>
 <name>
-Prog2GUI
+FormClassHouse
 </name>
 </assembly>
 <members>
-<member name="P:Prog2GUI.My.Resources.Resources.ResourceManager">
+<member name="P:FormClassHouse.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
-</member><member name="P:Prog2GUI.My.Resources.Resources.Culture">
+</member><member name="P:FormClassHouse.My.Resources.Resources.Culture">
 	<summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
-</member><member name="T:Prog2GUI.My.Resources.Resources">
+</member><member name="T:FormClassHouse.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
