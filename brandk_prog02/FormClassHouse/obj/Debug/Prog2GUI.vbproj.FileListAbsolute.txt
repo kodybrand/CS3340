@@ -13,3 +13,7 @@ C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse
 C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.pdb
 C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.FormClassHouse.resources
 C:\Users\Kody\Documents\Visual Studio 2012\Projects\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.FormClassList.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\bin\Debug\FormClassHouse.exe.config
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.exe
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\obj\Debug\FormClassHouse.pdb
