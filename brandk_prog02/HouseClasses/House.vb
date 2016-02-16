@@ -27,6 +27,8 @@ Public MustInherit Class House
 
     ' Constructor
     Public Sub New(ByVal aID As String)
+        Dim idL As Integer = aID.Length - 1
+        Dim index As Integer = 0
         For Each House In AllHouses
             If House._ID = aID Then
                 Throw New Exception("ID must be unique!")
@@ -35,9 +37,12 @@ Public MustInherit Class House
         If Not aID.Length = 5 Then
             Throw New Exception("ID must have exactly five characters!")
         End If
-        If Not (Regex.IsMatch(aID, "[A-Za-z0-9]")) Then
-            Throw New Exception("Each character of ID must be a digit or letter!")
-        End If
+        For index = 0 To 4
+            Dim idChar = aID(index)
+            If Not Char.IsLetterOrDigit(idChar) Then
+                Throw New Exception("Each character of ID must be a digit or letter!")
+            End If
+        Next
         Me._ID = aID
         AllHouses.Add(Me)
     End Sub
