@@ -1,7 +1,7 @@
 ﻿'----------------------------------------------
 ' Name: Kody Brand
 ' Date: 2/05/2016
-' Description: Program2
+' Description: Program3
 '              Class FormClassHouse
 '       Holds all the methods and functions for the House Form.
 '----------------------------------------------
@@ -136,10 +136,11 @@ Public Class FormClassHouse
 
     ' handles the modifying button
     Protected Overridable Sub btnModify_Click(sender As Object, e As EventArgs) Handles btnModify.Click
+        ErrorProvider1.Clear()
         Try
             _currHouse.Modify(getRooms(), getGarages())
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            ErrorProvider1.SetError(btnModify, ex.Message)
         End Try
     End Sub
 

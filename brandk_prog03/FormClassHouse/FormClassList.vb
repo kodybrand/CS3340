@@ -1,7 +1,7 @@
 ﻿'----------------------------------------------
 ' Name: Kody Brand
 ' Date: 2/05/2016
-' Description: Program2
+' Description: Program3
 '              Class FormClassList
 '       Holds all the methods and functions for the List Form.
 '----------------------------------------------
@@ -58,19 +58,13 @@ Public Class FormClassList
         End While
     End Sub
 
+    ' Remove the object referenced by aPerson
+
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
-        Try
-            ErrorProvider1.Clear()
+        lstHouses.Items.Remove(lstHouses.SelectedIndex)
+        Dim h As House = House.HouseByIndex(lstHouses.SelectedIndex)
 
-            CType(House.HouseByIndex(lstHouses.SelectedIndex), IDisposable).Dispose()
-            _currHouse = Nothing
-
-
-        Catch ex As Exception
-            ErrorProvider1.SetError(btnRemove, ex.Message)
-        End Try
-
-        
-
+        CType(h, IDisposable).Dispose()
+        h = Nothing
     End Sub
 End Class

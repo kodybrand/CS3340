@@ -1,7 +1,8 @@
-﻿'----------------------------------------------
+﻿Imports UWPCS3340
+'----------------------------------------------
 ' Name: Kody Brand
 ' Date: 2/05/2016
-' Description: Program2
+' Description: Program3
 '              Class House
 '       Abstract class for house
 '----------------------------------------------
@@ -54,11 +55,12 @@ Public MustInherit Class House : Implements IDisposable
         Dim message As String = ""
 
         If numRooms < Me._MIN_ROOMS Or numRooms > Me._MAX_ROOMS Then
-            message = "Number of rooms is out of range!\r\n"
+            message = "Invalid room selection"
+            Err()
             flag = True
         End If
         If numGarages < Me._MIN_GARAGES Or numGarages > Me._MAX_GARAGES Then
-            message = "Number of garages is out of range!"
+            message = "Invalid garage selection"
             flag = True
         End If
         If flag = True Then
@@ -142,19 +144,26 @@ Public MustInherit Class House : Implements IDisposable
         RaiseEvent HouseListUpdatedEvent()
     End Sub
 
-    'removes self from list of houses, raises list change event
-    Protected Overridable Sub Dispose(ByVal disposing As Boolean)
-        If (Not disposedValue And disposing) Then
-            House.AllHouses.Remove(Me)
-            RaiseEvent HouseListUpdatedEvent()
-        End If
-        disposedValue = True
-    End Sub
-
-    'implements IDisposable.Dispose
     Private Sub Dispose() Implements IDisposable.Dispose
+        ' Do not change this code.  Put cleanup code in Dispose(ByVal disposing As Boolean) above.
         Dispose(True)
         GC.SuppressFinalize(Me)
     End Sub
+
+    Protected Overridable Sub Dispose(ByVal disposing As Boolean)
+        If Not Me.disposedValue Then
+            If disposing Then
+                ' TODO: dispose managed state (managed objects).
+                AllHouses.Remove(Me)
+
+                ' Raise event ListUpdated
+            End If
+
+            ' TODO: free unmanaged resources (unmanaged objects) and override Finalize() below.
+            ' TODO: set large fields to null.
+        End If
+        Me.disposedValue = True
+    End Sub
+
 
 End Class

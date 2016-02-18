@@ -1,4 +1,11 @@
-﻿Imports UWPCS3340
+﻿'----------------------------------------------
+' Name: Kody Brand
+' Date: 02/18/2016
+' Description: FormClassBranch
+'              Handles the branches of the program
+
+'----------------------------------------------
+Imports UWPCS3340
 
 Public Class FormClassBranch : Inherits FormClassHouse
 
@@ -11,23 +18,24 @@ Public Class FormClassBranch : Inherits FormClassHouse
         End Set
     End Property
 
+    ' Loading of the form
     Protected Sub FormClassBranch_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.Text = "Branch #" & _branchNo
         Me.btnExit.text = "Unload"
     End Sub
 
-
+    ' Modify button actions
     Protected Overrides Sub btnModify_Click(sender As Object, e As EventArgs)
+        ErrorProvider1.Clear()
+
         Try
-            errRooms.Clear()
-            ErrGarages.Clear()
             _currHouse.Modify(getRooms, getGarages)
         Catch ex As Exception
-            Console.WriteLine(ex.Message)
-            If ex.Message.Contains("Room") Then
-                errRooms.SetError(gbRooms, ex.Message)
-            ElseIf ex.Message.Contains("Garage") Then
-                errGarages.SetError(gbGarages, ex.Message)
+            If ex.Message.Contains("room") Then
+                ErrorProvider1.SetError(gbRooms, ex.Message)
+            End If
+            If ex.Message.Contains("garage") Then
+                ErrorProvider1.SetError(gbGarages, ex.Message)
             End If
         End Try
     End Sub

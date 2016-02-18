@@ -41,12 +41,10 @@ Partial Class FormClassHouse
         Me.btnModify = New System.Windows.Forms.Button()
         Me.btnList = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.errRooms = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.errGarages = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.gbRooms.SuspendLayout()
         Me.gbGarages.SuspendLayout()
-        CType(Me.errRooms, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.errGarages, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -242,13 +240,9 @@ Partial Class FormClassHouse
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'errRooms
+        'ErrorProvider1
         '
-        Me.errRooms.ContainerControl = Me
-        '
-        'errGarages
-        '
-        Me.errGarages.ContainerControl = Me
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'FormClassHouse
         '
@@ -274,8 +268,7 @@ Partial Class FormClassHouse
         Me.gbRooms.PerformLayout()
         Me.gbGarages.ResumeLayout(False)
         Me.gbGarages.PerformLayout()
-        CType(Me.errRooms, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.errGarages, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -295,9 +288,8 @@ Partial Class FormClassHouse
     Friend WithEvents rbG3 As System.Windows.Forms.RadioButton
     Friend WithEvents btnModify As System.Windows.Forms.Button
     Friend WithEvents btnList As System.Windows.Forms.Button
-    Public WithEvents errGarages As System.Windows.Forms.ErrorProvider
-    Public WithEvents errRooms As System.Windows.Forms.ErrorProvider
     Protected WithEvents gbRooms As System.Windows.Forms.GroupBox
     Protected WithEvents gbGarages As System.Windows.Forms.GroupBox
     Public WithEvents btnExit As System.Windows.Forms.Button
+    Public WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class
