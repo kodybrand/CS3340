@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HouseClasses", "brandk_prog02\HouseClasses\HouseClasses.vbproj", "{02E50FA9-FE9E-42DD-8574-859273A98C63}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FormClasses", "brandk_prog02\FormClassHouse\FormClasses.vbproj", "{26482D9E-5590-464B-8290-F91A6A263A22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02E50FA9-FE9E-42DD-8574-859273A98C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02E50FA9-FE9E-42DD-8574-859273A98C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02E50FA9-FE9E-42DD-8574-859273A98C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02E50FA9-FE9E-42DD-8574-859273A98C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26482D9E-5590-464B-8290-F91A6A263A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26482D9E-5590-464B-8290-F91A6A263A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26482D9E-5590-464B-8290-F91A6A263A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26482D9E-5590-464B-8290-F91A6A263A22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

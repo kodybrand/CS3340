@@ -1,0 +1,15 @@
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\bin\Debug\FormClasses.dll.config
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\bin\Debug\FormClasses.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\bin\Debug\FormClasses.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\bin\Debug\FormClasses.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\bin\Debug\HouseClasses.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\bin\Debug\HouseClasses.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\bin\Debug\HouseClasses.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\obj\Debug\FormClasses.vbprojResolveAssemblyReference.cache
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\obj\Debug\UWPCS3340.FormClassHouse.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\obj\Debug\UWPCS3340.FormClassList.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\obj\Debug\UWPCS3340.Resources.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\obj\Debug\FormClasses.vbproj.GenerateResource.Cache
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\obj\Debug\FormClasses.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\obj\Debug\FormClasses.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog02\FormClassHouse\obj\Debug\FormClasses.pdb
