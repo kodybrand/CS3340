@@ -1,0 +1,10 @@
+C:\Users\Kody\AppData\Local\Temporary Projects\Prog4GUI\bin\Debug\Prog4GUI.exe.config
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\bin\Debug\Prog4GUI.exe.config
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.Resources.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.vbproj.GenerateResource.Cache
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\bin\Debug\Prog4GUI.exe
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\bin\Debug\Prog4GUI.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\bin\Debug\Prog4GUI.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.exe
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.pdb

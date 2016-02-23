@@ -66,5 +66,16 @@ Public Class FormClassList
 
         CType(h, IDisposable).Dispose()
         h = Nothing
+        Dim totalCount As Integer = House.TotalCount
+        Dim num1 As Integer = 0
+        Dim num2 As Integer = House.TotalCount - 1
+        Dim index As Integer = num1
+        txtHouseCount.Text = totalCount
+        lstHouses.Items.Clear()
+        While index <= num2
+            h = House.HouseByIndex(index)
+            lstHouses.Items.Add(h.ID.PadRight(8) + h.Type.PadLeft(12) + String.Format(CURRENCY, h.Price).PadLeft(13))
+            index = index + 1
+        End While
     End Sub
 End Class
