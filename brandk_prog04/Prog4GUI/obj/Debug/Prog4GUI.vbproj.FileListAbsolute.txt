@@ -8,3 +8,8 @@ C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\bin\Debug\Prog4GU
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.exe
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.xml
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.FormClassThread.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\bin\Debug\UserClass.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\bin\Debug\UserClass.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\bin\Debug\UserClass.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.vbprojResolveAssemblyReference.cache

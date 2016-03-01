@@ -94,6 +94,9 @@
     <Compile Include="Prog4.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormClassThread.resx">
+      <DependentUpon>FormClassThread.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

@@ -1,4 +1,5 @@
 ﻿Imports System.Threading
+Imports System.Windows.Forms
 
 Public Class UserAccount
 
@@ -9,8 +10,8 @@ Public Class UserAccount
     Private Const MAX_TRANSACTION As Integer = 100
     Private _thread As Thread
     Private _id As String
-    ' Private _mainForm As 
-    ' Private _state
+    ' Private _mainForm As Windows.Forms.Form
+    Private _state As UserAccount
     Private _randomGenerator As Random
     Private _workTime As Integer
     Private _transactionAmount As Integer
@@ -18,8 +19,6 @@ Public Class UserAccount
     ' Private _trans
     ' Private _report
     Private _userWait As ManualResetEventSlim
-
-
 
 
 End Class
