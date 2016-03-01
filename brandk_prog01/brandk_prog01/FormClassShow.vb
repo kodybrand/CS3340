@@ -5,6 +5,7 @@
 '              Class FormClassShow. Handles the displaying of buttons, and the changing of
 '               the font changing. Also changing between forms. 
 '----------------------------------------------
+Imports System.Windows.Forms
 
 Public Class FormClassShow
 
