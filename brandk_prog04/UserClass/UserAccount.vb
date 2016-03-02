@@ -103,7 +103,7 @@ Public Class UserAccount
             Me._workTime = Me._randomGenerator.Next(MIN_WORK_TIME, MAX_WORK_TIME)
             Thread.Sleep(Me._workTime)
             Me._transactionAmount = Me._randomGenerator.Next(MIN_TRANSACTION, MAX_TRANSACTION)
-            Me._mainForm.Invoke(Me._trans, Me._id, Me._transactionAmount)
+            Me._mainForm.Invoke(Me._trans, Me._id, Me._transactionAmount, False)
             If (Me._state = UserState.Waiting) Then
                 Me._mainForm.Invoke(Me._report, Me._id, Me._state)
                 Me._userWait.Reset()
@@ -114,7 +114,7 @@ Public Class UserAccount
             End If
         End While
         Me._mainForm.Invoke(Me._report, Me._id, Me._state)
-        Me._mainForm.Invoke(Me._trans, Me._id, Me._totalTransactionAmount)
+        Me._mainForm.Invoke(Me._trans, Me._id, Me._totalTransactionAmount, True)
         UserAccount.AllUsers.Remove(Me)
         If (Not UserAccount.AllUsers.Count = 0) Then
             Return
