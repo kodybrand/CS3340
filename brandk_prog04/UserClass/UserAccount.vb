@@ -1,4 +1,11 @@
-﻿Imports System.Threading
+﻿'----------------------------------------------
+' Name: Kody Brand
+' Date: 3/3/2016
+' Description: Program4
+'              Class UserAccount
+'                 Represents users sharing one common bank account
+'----------------------------------------------
+Imports System.Threading
 Imports System.Windows.Forms
 
 Public Class UserAccount
@@ -42,6 +49,7 @@ Public Class UserAccount
         End Set
     End Property
 
+   ' To invoke delegates on a form.
     Public Sub New()
         MyBase.New()
         Me._userWait = New ManualResetEvent(False)
@@ -96,13 +104,15 @@ Public Class UserAccount
         Return UserAccount.AllUsers(index)
     End Function
 
+   ' The what is to be done every time the thread is hit.
     Private Sub run()
         UserAccount.AllUsers.Add(Me)
         Me._mainForm.Invoke(Me._report, Me._id, Me._state)
         While (Not Me._state = UserAccount.UserState.Terminated)
             Me._workTime = Me._randomGenerator.Next(MIN_WORK_TIME, MAX_WORK_TIME)
             Thread.Sleep(Me._workTime)
-            Me._transactionAmount = Me._randomGenerator.Next(MIN_TRANSACTION, MAX_TRANSACTION)
+         Me._transactionAmount = Me._randomGenerator.Next(MIN_TRANSACTION, MAX_TRANSACTION)
+         Me._totalTransactionAmount = (Me._totalTransactionAmount + Me._transactionAmount)
             Me._mainForm.Invoke(Me._trans, Me._id, Me._transactionAmount, False)
             If (Me._state = UserState.Waiting) Then
                 Me._mainForm.Invoke(Me._report, Me._id, Me._state)

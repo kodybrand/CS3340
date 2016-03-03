@@ -6,3 +6,11 @@ C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\UserClass\bin\Debug\UserCl
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\UserClass\obj\Debug\UserClass.dll
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\UserClass\obj\Debug\UserClass.xml
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\UserClass\obj\Debug\UserClass.pdb
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\UserClass\bin\Debug\UserClass.dll
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\UserClass\bin\Debug\UserClass.pdb
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\UserClass\bin\Debug\UserClass.xml
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\UserClass\obj\Debug\UWPCS3340.Resources.resources
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\UserClass\obj\Debug\UserClass.vbproj.GenerateResource.Cache
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\UserClass\obj\Debug\UserClass.dll
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\UserClass\obj\Debug\UserClass.xml
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\UserClass\obj\Debug\UserClass.pdb
