@@ -13,3 +13,17 @@ C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\bin\Debug\UserCla
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\bin\Debug\UserClass.pdb
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\bin\Debug\UserClass.xml
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.vbprojResolveAssemblyReference.cache
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\bin\Debug\Prog4GUI.exe.config
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.exe
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.xml
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.pdb
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\bin\Debug\Prog4GUI.exe
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\bin\Debug\Prog4GUI.pdb
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\bin\Debug\Prog4GUI.xml
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\bin\Debug\UserClass.dll
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\bin\Debug\UserClass.pdb
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\bin\Debug\UserClass.xml
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.vbprojResolveAssemblyReference.cache
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.FormClassThread.resources
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.Resources.resources
+C:\Users\brandk\Documents\Projects\cs3340\brandk_prog04\Prog4GUI\obj\Debug\Prog4GUI.vbproj.GenerateResource.Cache
