@@ -1,0 +1,8 @@
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\bin\Debug\ReaderWriterClasses.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\bin\Debug\ReaderWriterClasses.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\bin\Debug\ReaderWriterClasses.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\obj\Debug\UWPCS3340.Resources.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\obj\Debug\ReaderWriterClasses.vbproj.GenerateResource.Cache
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\obj\Debug\ReaderWriterClasses.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\obj\Debug\ReaderWriterClasses.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\obj\Debug\ReaderWriterClasses.pdb

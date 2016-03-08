@@ -1,0 +1,13 @@
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\bin\Debug\Prog5GUI.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\bin\Debug\Prog5GUI.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\bin\Debug\ReaderWriterClasses.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\bin\Debug\ReaderWriterClasses.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\bin\Debug\ReaderWriterClasses.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\obj\Debug\Prog5GUI.vbprojResolveAssemblyReference.cache
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\obj\Debug\Prog5.Resources.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\obj\Debug\Prog5.ReaderWriterForm.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\obj\Debug\Prog5GUI.vbproj.GenerateResource.Cache
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\obj\Debug\Prog5GUI.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\obj\Debug\Prog5GUI.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\bin\Debug\Prog5GUI.exe
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\obj\Debug\Prog5GUI.exe
