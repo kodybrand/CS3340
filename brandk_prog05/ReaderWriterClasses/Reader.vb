@@ -7,7 +7,7 @@ Imports System.Threading
 ' Name: Kody Brand
 ' Date: 3/8/2016
 ' Description: Program5
-'              Class FormClassThread
+'              Class Reader
 '                 
 '----------------------------------------------
 

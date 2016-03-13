@@ -2,6 +2,14 @@
 Imports System.Threading
 Imports System.Runtime.CompilerServices
 
+'----------------------------------------------
+' Name: Kody Brand
+' Date: 3/8/2016
+' Description: Program5
+'              Class DatabaseClass
+'                 
+'----------------------------------------------
+
 Public Class DatabaseClass
     Private _total As Integer
     Private ReaderCount As Integer
