@@ -25,8 +25,8 @@ Partial Class ReaderWriterForm
         Me.lstWorking = New System.Windows.Forms.ListBox()
         Me.lstWaiting = New System.Windows.Forms.ListBox()
         Me.txtLog = New System.Windows.Forms.TextBox()
-        Me.btnReader = New System.Windows.Forms.Button()
-        Me.btnWriter = New System.Windows.Forms.Button()
+        Me.btnNewReader = New System.Windows.Forms.Button()
+        Me.btnNewWriter = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -58,23 +58,23 @@ Partial Class ReaderWriterForm
         Me.txtLog.Size = New System.Drawing.Size(284, 225)
         Me.txtLog.TabIndex = 2
         '
-        'btnReader
+        'btnNewReader
         '
-        Me.btnReader.Location = New System.Drawing.Point(220, 342)
-        Me.btnReader.Name = "btnReader"
-        Me.btnReader.Size = New System.Drawing.Size(75, 23)
-        Me.btnReader.TabIndex = 3
-        Me.btnReader.Text = "New Reader"
-        Me.btnReader.UseVisualStyleBackColor = True
+        Me.btnNewReader.Location = New System.Drawing.Point(220, 342)
+        Me.btnNewReader.Name = "btnNewReader"
+        Me.btnNewReader.Size = New System.Drawing.Size(75, 23)
+        Me.btnNewReader.TabIndex = 3
+        Me.btnNewReader.Text = "New Reader"
+        Me.btnNewReader.UseVisualStyleBackColor = True
         '
-        'btnWriter
+        'btnNewWriter
         '
-        Me.btnWriter.Location = New System.Drawing.Point(378, 343)
-        Me.btnWriter.Name = "btnWriter"
-        Me.btnWriter.Size = New System.Drawing.Size(75, 23)
-        Me.btnWriter.TabIndex = 4
-        Me.btnWriter.Text = "New Writer"
-        Me.btnWriter.UseVisualStyleBackColor = True
+        Me.btnNewWriter.Location = New System.Drawing.Point(378, 343)
+        Me.btnNewWriter.Name = "btnNewWriter"
+        Me.btnNewWriter.Size = New System.Drawing.Size(75, 23)
+        Me.btnNewWriter.TabIndex = 4
+        Me.btnNewWriter.Text = "New Writer"
+        Me.btnNewWriter.UseVisualStyleBackColor = True
         '
         'btnExit
         '
@@ -130,8 +130,8 @@ Partial Class ReaderWriterForm
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
-        Me.Controls.Add(Me.btnWriter)
-        Me.Controls.Add(Me.btnReader)
+        Me.Controls.Add(Me.btnNewWriter)
+        Me.Controls.Add(Me.btnNewReader)
         Me.Controls.Add(Me.txtLog)
         Me.Controls.Add(Me.lstWaiting)
         Me.Controls.Add(Me.lstWorking)
@@ -145,8 +145,8 @@ Partial Class ReaderWriterForm
     Friend WithEvents lstWorking As System.Windows.Forms.ListBox
     Friend WithEvents lstWaiting As System.Windows.Forms.ListBox
     Friend WithEvents txtLog As System.Windows.Forms.TextBox
-    Friend WithEvents btnReader As System.Windows.Forms.Button
-    Friend WithEvents btnWriter As System.Windows.Forms.Button
+    Friend WithEvents btnNewReader As System.Windows.Forms.Button
+    Friend WithEvents btnNewWriter As System.Windows.Forms.Button
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label

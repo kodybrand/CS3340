@@ -84,8 +84,9 @@ Public MustInherit Class ReaderWriter
         Me._ReaderWriterEvent.Set()
     End Sub
 
-    Protected MustOverride Sub run()
+    Protected Overridable Sub run()
 
+    End Sub
     Public Sub New()
         Me._ReaderWriterEvent = New AutoResetEvent(False)
         _rondomGenerator = New Random
