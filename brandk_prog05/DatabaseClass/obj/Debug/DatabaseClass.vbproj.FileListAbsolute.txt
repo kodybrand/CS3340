@@ -1,0 +1,8 @@
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\DatabaseClass\bin\Debug\DatabaseClass.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\DatabaseClass\bin\Debug\DatabaseClass.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\DatabaseClass\bin\Debug\DatabaseClass.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\DatabaseClass\obj\Debug\UWPCS3340.Resources.resources
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\DatabaseClass\obj\Debug\DatabaseClass.vbproj.GenerateResource.Cache
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\DatabaseClass\obj\Debug\DatabaseClass.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\DatabaseClass\obj\Debug\DatabaseClass.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\DatabaseClass\obj\Debug\DatabaseClass.pdb

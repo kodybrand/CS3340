@@ -9,7 +9,7 @@ Imports System.Threading
 '                 
 '----------------------------------------------
 
-Public MustInherit Class Writer : Inherits ReaderWriter
+Public Class Writer : Inherits ReaderWriter
 
     Public Overrides ReadOnly Property ID As String
         Get

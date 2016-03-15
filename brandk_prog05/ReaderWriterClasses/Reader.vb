@@ -1,6 +1,9 @@
 ﻿Imports UWPCS3340
 Imports System.Runtime.CompilerServices
+Imports Microsoft.VisualBasic.CompilerServices
+Imports System
 Imports System.Threading
+Imports System.Diagnostics
 
 
 '----------------------------------------------
@@ -11,11 +14,11 @@ Imports System.Threading
 '                 
 '----------------------------------------------
 
-Public MustInherit Class Reader : Inherits ReaderWriter
+Public Class Reader : Inherits ReaderWriter
 
     Public Overrides ReadOnly Property ID As String
         Get
-            Return "Reader_KB" + Convert.ToSingle(Me._thread.GetHashCode)
+            Return "Reader_KB" + Convert.ToString(Me._thread.GetHashCode)
         End Get
     End Property
 
@@ -28,7 +31,7 @@ Public MustInherit Class Reader : Inherits ReaderWriter
     Protected Overrides Sub run()
         ReaderWriter._database.LockDataObj()
         Monitor.Enter(ReaderWriter.FIFOQueue)
-        If (ReaderWriter.FIFOQueue.Count > 0 Or ReaderWriter._database.TheDatabaseStatus = DatabaseClass.DatabaseStatus.Writing) Then
+        If ((ReaderWriter.FIFOQueue.Count > 0) Or ReaderWriter._database.TheDatabaseStatus = DatabaseClass.DatabaseStatus.Writing) Then
             ReaderWriter.FIFOQueue.Enqueue(Me)
             Me._mainForm.Invoke(Me._passMsg, Me.ID, ReaderWriter.State.Waiting, -1000)
             Monitor.Exit(ReaderWriter.FIFOQueue)
@@ -50,8 +53,13 @@ Public MustInherit Class Reader : Inherits ReaderWriter
         End If
         ReaderWriter._database.ReleaseDataObj()
     End Sub
-    Protected Sub WakeupNextReader()
 
+    Protected Sub WakeupNextReader()
+        Monitor.Enter(ReaderWriter.FIFOQueue)
+        If ((ReaderWriter.FIFOQueue.Count > 0) And (RuntimeHelpers.GetObjectValue(ReaderWriter.FIFOQueue.Peek()).type = ReaderWriter.ReaderWriterType.Reader)) Then
+            RuntimeHelpers.GetObjectValue(ReaderWriter.FIFOQueue.Dequeue())
+        End If
+        Monitor.Exit(ReaderWriter.FIFOQueue)
     End Sub
 
 

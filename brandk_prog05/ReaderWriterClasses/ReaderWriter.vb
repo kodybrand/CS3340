@@ -40,7 +40,13 @@ Public MustInherit Class ReaderWriter
     ' possible that a thread is waiting for all readers/writers to finish the work.
     ' Mutual exclusion on the queue must be enforced.
     Protected Shared Sub WakeupNextWhenExiting()
-
+        Monitor.Enter(ReaderWriter.FIFOQueue)
+        If (Reader.FIFOQueue.Count = 0) Then
+            ReaderWriter.endProgram.Set()
+        Else
+            ReaderWriter.FIFOQueue.Dequeue().WakeUp()
+        End If
+        Monitor.Exit(ReaderWriter.FIFOQueue)
     End Sub
 
     ' Waits for all readers and writers to finish the work in order to terminate
@@ -80,13 +86,13 @@ Public MustInherit Class ReaderWriter
         Me._thread.Start()
     End Sub
 
+    Protected Overridable Sub run()
+    End Sub
+
     Public Sub WakeUp()
         Me._ReaderWriterEvent.Set()
     End Sub
 
-    Protected Overridable Sub run()
-
-    End Sub
     Public Sub New()
         Me._ReaderWriterEvent = New AutoResetEvent(False)
         _rondomGenerator = New Random

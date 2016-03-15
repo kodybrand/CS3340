@@ -14,7 +14,7 @@ Public Class DatabaseClass
     Private _total As Integer
     Private ReaderCount As Integer
     Private WriterCount As Integer
-    Private DataObject As Object
+    Private DataObj As Object
 
     ' Returns Reading when some readers are reading the database value,
     ' Writing when a writer is writing the database value,
@@ -33,18 +33,18 @@ Public Class DatabaseClass
     End Property
 
     Public Sub New(ByVal total As Integer)
-        Me.DataObject = RuntimeHelpers.GetObjectValue(New Object)
+        Me.DataObj = RuntimeHelpers.GetObjectValue(New Object)
         Me._total = total
     End Sub
 
     ' Enter Monitor before exclusive access to ReaderCount and WriterCount.
     Public Sub LockDataObj()
-        Monitor.Enter(RuntimeHelpers.GetObjectValue(Me.DataObject))
+        Monitor.Enter(RuntimeHelpers.GetObjectValue(Me.DataObj))
     End Sub
 
     ' Exit Monitor after exclusive access to ReaderCount and WriterCount.
     Public Sub ReleaseDataObj()
-        Monitor.Exit(RuntimeHelpers.GetObjectValue(Me.DataObject))
+            Monitor.Exit(RuntimeHelpers.GetObjectValue(Me.DataObj))
     End Sub
 
     ' Gets and sets the data value
@@ -60,7 +60,6 @@ Public Class DatabaseClass
     ' Increments the ReaderCount by one
     Public Sub IncreaseReaderCount()
         Me.ReaderCount = Me.ReaderCount + 1
-
     End Sub
 
     ' Decrements the ReaderCount by one.

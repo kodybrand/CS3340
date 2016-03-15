@@ -6,3 +6,7 @@ C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\obj\De
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\obj\Debug\ReaderWriterClasses.dll
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\obj\Debug\ReaderWriterClasses.xml
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\obj\Debug\ReaderWriterClasses.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\bin\Debug\DatabaseClass.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\bin\Debug\DatabaseClass.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\bin\Debug\DatabaseClass.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\ReaderWriterClasses\obj\Debug\ReaderWriterClasses.vbprojResolveAssemblyReference.cache

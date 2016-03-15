@@ -11,3 +11,6 @@ C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\obj\Debug\Prog5GU
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\obj\Debug\Prog5GUI.pdb
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\bin\Debug\Prog5GUI.exe
 C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\obj\Debug\Prog5GUI.exe
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\bin\Debug\DatabaseClass.dll
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\bin\Debug\DatabaseClass.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog05\Prog5GUI\bin\Debug\DatabaseClass.xml

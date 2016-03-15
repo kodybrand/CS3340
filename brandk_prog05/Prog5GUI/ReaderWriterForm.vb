@@ -64,7 +64,37 @@ Public Class ReaderWriterForm
         delegateVaribles = New ReaderWriterForm.EnableButtons(AddressOf SubToEndableButtons)
     End Sub
 
-    Private Sub delegateSub()
+    Private Sub delegateSub(ByVal id As String, ByVal state As ReaderWriter.State, ByVal total As Integer)
+        If Not total = -1000 Then
+            txtTotal.Text = total.ToString
+        End If
+        If (state = ReaderWriter.State.Waiting) Then
+            lstWaiting.Items.Add(id)
+        Else
+            If (state = ReaderWriter.State.Working) Then
+                Dim index1 As Integer = -1
+                Dim num1 As Integer = 0
+                Dim num2 As Integer = lstWaiting.Items.Count - 1
+                Dim index2 As Integer = num1
+                While (index2 <= num2)
+                    If (lstWaiting.Items(index2).ToString.Contains(id)) Then
+                        index1 = index2
+                    End If
+                    index2 = index2 + 1
+                End While
+                If (Not index1 = -1) Then
+                    lstWaiting.Items.RemoveAt(index1)
+                End If
+                lstWorking.Items.Add(id)
+                txtLog.Text = txtLog.Text + id.PadRight(11) + ": Start to work: Total is " + total.ToString + vbCrLf
+            Else
+                lstWorking.Items.RemoveAt(0)
+                txtLog.Text = txtLog.Text + id.PadRight(11) + ": Finished work: Total is " + total.ToString + vbCrLf
+            End If
+            txtLog.SelectionStart = txtLog.TextLength
+            txtLog.ScrollToCaret()
+        End If
+
 
     End Sub
 
