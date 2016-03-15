@@ -3,7 +3,7 @@
 ' Date: 3/8/2016
 ' Description: Program5
 '              Class FormClassThread
-'                 
+'                 Handles the starting of processes
 '----------------------------------------------
 
 Imports UWPCS3340
@@ -16,6 +16,7 @@ Public Class ReaderWriterForm
     Private dThread As Thread
     Private delegateVaribles As ReaderWriterForm.EnableButtons
 
+    ' NEw reader actions
     Private Sub btnReader_Click(sender As Object, e As EventArgs) Handles btnNewReader.Click
         rw = New Reader
         rw.DisplayMsg = New ReaderWriter.PassMessage(AddressOf delegateSub)
@@ -24,19 +25,21 @@ Public Class ReaderWriterForm
         rw.SpinUp()
     End Sub
 
+    ' new Writer actions
     Private Sub btnWriter_Click(sender As Object, e As EventArgs) Handles btnNewWriter.Click
         rw = New Writer
         rw.MainForm = Me
         rw.DisplayMsg = New ReaderWriter.PassMessage(AddressOf delegateSub)
         rw.SpinUp()
     End Sub
-
+    ' enable buttons
     Private Sub SubToEndableButtons()
         btnExit.Enabled = True
         btnNewReader.Enabled = True
         btnNewWriter.Enabled = True
     End Sub
 
+    ' Wait for times to end
     Private Sub WaitForAllReadersWritersTerminate()
         ReaderWriter.FinishReadWrite()
         If (MessageBox.Show("Do you want to exit?", "Program 5", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes) Then
@@ -49,6 +52,7 @@ Public Class ReaderWriterForm
 
     Private Delegate Sub EnableButtons()
 
+    ' Button Exit actions
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         dThread = New Thread(New ThreadStart(AddressOf WaitForAllReadersWritersTerminate))
         dThread.Start()
@@ -57,6 +61,7 @@ Public Class ReaderWriterForm
         btnNewWriter.Enabled = False
     End Sub
 
+    ' Loading form actions
     Private Sub ReaderWriterForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         db = New DatabaseClass(1000)
         ReaderWriter.TheDatabase = db
@@ -64,6 +69,7 @@ Public Class ReaderWriterForm
         delegateVaribles = New ReaderWriterForm.EnableButtons(AddressOf SubToEndableButtons)
     End Sub
 
+    ' Deleting the dub
     Private Sub delegateSub(ByVal id As String, ByVal state As ReaderWriter.State, ByVal total As Integer)
         If Not total = -1000 Then
             txtTotal.Text = total.ToString
@@ -94,8 +100,6 @@ Public Class ReaderWriterForm
             txtLog.SelectionStart = txtLog.TextLength
             txtLog.ScrollToCaret()
         End If
-
-
     End Sub
 
 End Class

@@ -9,7 +9,7 @@ Imports System.Collections
 ' Date: 3/8/2016
 ' Description: Program5
 '              Class ReaderWriter
-'                 
+'                 Base for the readers and writers
 '----------------------------------------------
 
 Public MustInherit Class ReaderWriter
@@ -81,6 +81,7 @@ Public MustInherit Class ReaderWriter
 
     Public MustOverride ReadOnly Property type() As ReaderWriterType
 
+    ' Spin up the thread
     Public Sub SpinUp()
         Me._thread = New Thread(New ThreadStart(AddressOf run))
         Me._thread.Start()
@@ -89,10 +90,12 @@ Public MustInherit Class ReaderWriter
     Protected Overridable Sub run()
     End Sub
 
+    ' Wake up the thread
     Public Sub WakeUp()
         Me._ReaderWriterEvent.Set()
     End Sub
 
+    ' Constructor
     Public Sub New()
         Me._ReaderWriterEvent = New AutoResetEvent(False)
         _rondomGenerator = New Random

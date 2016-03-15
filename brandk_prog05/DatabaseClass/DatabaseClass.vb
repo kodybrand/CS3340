@@ -7,7 +7,7 @@ Imports System.Runtime.CompilerServices
 ' Date: 3/8/2016
 ' Description: Program5
 '              Class DatabaseClass
-'                 
+'                 The DatabaseClass that holds queue
 '----------------------------------------------
 
 Public Class DatabaseClass
@@ -32,6 +32,7 @@ Public Class DatabaseClass
         End Get
     End Property
 
+    ' Object constructor
     Public Sub New(ByVal total As Integer)
         Me.DataObj = RuntimeHelpers.GetObjectValue(New Object)
         Me._total = total

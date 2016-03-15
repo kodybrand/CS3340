@@ -11,7 +11,7 @@ Imports System.Diagnostics
 ' Date: 3/8/2016
 ' Description: Program5
 '              Class Reader
-'                 
+'                 The Reader Thread
 '----------------------------------------------
 
 Public Class Reader : Inherits ReaderWriter
@@ -27,11 +27,11 @@ Public Class Reader : Inherits ReaderWriter
             Return ReaderWriterType.Reader
         End Get
     End Property
-
+    ' Running of the thread
     Protected Overrides Sub run()
         ReaderWriter._database.LockDataObj()
         Monitor.Enter(ReaderWriter.FIFOQueue)
-        If ((ReaderWriter.FIFOQueue.Count > 0) Or ReaderWriter._database.TheDatabaseStatus = DatabaseClass.DatabaseStatus.Writing) Then
+        If (ReaderWriter.FIFOQueue.Count > 0 Or ReaderWriter._database.TheDatabaseStatus = DatabaseClass.DatabaseStatus.Writing) Then
             ReaderWriter.FIFOQueue.Enqueue(Me)
             Me._mainForm.Invoke(Me._passMsg, Me.ID, ReaderWriter.State.Waiting, -1000)
             Monitor.Exit(ReaderWriter.FIFOQueue)
@@ -48,21 +48,20 @@ Public Class Reader : Inherits ReaderWriter
         Me._mainForm.Invoke(Me._passMsg, Me.ID, ReaderWriter.State.Working, ReaderWriter._database.TotalValue)
         Thread.Sleep(_rondomGenerator.Next(2000, 3000))
         Me._mainForm.Invoke(Me._passMsg, Me.ID, ReaderWriter.State.Finished, ReaderWriter._database.TotalValue)
+        ReaderWriter._database.LockDataObj()
+        ReaderWriter._database.DecreaseReaderCount()
         If (ReaderWriter._database.TheDatabaseStatus = DatabaseClass.DatabaseStatus.Empty) Then
             ReaderWriter.WakeupNextWhenExiting()
         End If
         ReaderWriter._database.ReleaseDataObj()
     End Sub
-
+    ' Wakes up the next reader
     Protected Sub WakeupNextReader()
         Monitor.Enter(ReaderWriter.FIFOQueue)
-        If ((ReaderWriter.FIFOQueue.Count > 0) And (RuntimeHelpers.GetObjectValue(ReaderWriter.FIFOQueue.Peek()).type = ReaderWriter.ReaderWriterType.Reader)) Then
+        If ((ReaderWriter.FIFOQueue.Count > 0 And RuntimeHelpers.GetObjectValue(ReaderWriter.FIFOQueue.Peek()).type = ReaderWriter.ReaderWriterType.Reader)) Then
             RuntimeHelpers.GetObjectValue(ReaderWriter.FIFOQueue.Dequeue())
         End If
         Monitor.Exit(ReaderWriter.FIFOQueue)
     End Sub
-
-
-
 
 End Class

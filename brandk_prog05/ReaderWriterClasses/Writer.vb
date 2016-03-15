@@ -6,7 +6,7 @@ Imports System.Threading
 ' Date: 3/8/2016
 ' Description: Program5
 '              Class Writer
-'                 
+'                 The Writer Thread
 '----------------------------------------------
 
 Public Class Writer : Inherits ReaderWriter
@@ -23,6 +23,7 @@ Public Class Writer : Inherits ReaderWriter
         End Get
     End Property
 
+    ' The thread process
     Protected Overrides Sub run()
         ReaderWriter._database.LockDataObj()
         Monitor.Enter(ReaderWriter.FIFOQueue)
