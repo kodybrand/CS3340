@@ -1,0 +1,13 @@
+C:\Users\Kody\AppData\Local\Temporary Projects\brandk_prog06\bin\Debug\brandk_prog06.exe.config
+C:\Users\Kody\AppData\Local\Temporary Projects\brandk_prog06\obj\Debug\brandk_prog06.Resources.resources
+C:\Users\Kody\AppData\Local\Temporary Projects\brandk_prog06\obj\Debug\brandk_prog06.vbproj.GenerateResource.Cache
+C:\Users\Kody\AppData\Local\Temporary Projects\brandk_prog06\bin\Debug\brandk_prog06.exe
+C:\Users\Kody\AppData\Local\Temporary Projects\brandk_prog06\bin\Debug\brandk_prog06.pdb
+C:\Users\Kody\AppData\Local\Temporary Projects\brandk_prog06\bin\Debug\brandk_prog06.xml
+C:\Users\Kody\AppData\Local\Temporary Projects\brandk_prog06\obj\Debug\brandk_prog06.exe
+C:\Users\Kody\AppData\Local\Temporary Projects\brandk_prog06\obj\Debug\brandk_prog06.xml
+C:\Users\Kody\AppData\Local\Temporary Projects\brandk_prog06\obj\Debug\brandk_prog06.pdb
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog06\brandk_prog06\bin\Debug\brandk_prog06.exe.config
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog06\brandk_prog06\obj\Debug\brandk_prog06.exe
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog06\brandk_prog06\obj\Debug\brandk_prog06.xml
+C:\Users\Kody\Documents\Projects\CS3340\brandk_prog06\brandk_prog06\obj\Debug\brandk_prog06.pdb
