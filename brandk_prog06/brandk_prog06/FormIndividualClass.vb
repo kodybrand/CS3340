@@ -1,10 +1,11 @@
 ﻿Public Class FormIndividualClass
 
-    Friend MainForm As FormAllClass
+    Friend _mainForm As FormAllClass
 
     Private Sub FormIndividualClass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            Me.EmployeeTableAdapter.Fill(Me.ActivityDataSet.Employee)
+            Me.EmployeeTableAdapter.Connection.ConnectionString = _mainForm.connString
+            EmployeeTableAdapter.Fill(ActivityDataSet.Employee)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -26,8 +27,8 @@
 
     Private Sub btnAllEmployees_Click(sender As Object, e As EventArgs) Handles btnAllEmployees.Click
         Me.Hide()
-        Me.MainForm.Show()
-        Me.MainForm.BringToFront()
+        Me._mainForm.Show()
+        Me._mainForm.BringToFront()
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click

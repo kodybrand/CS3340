@@ -1,8 +1,15 @@
-﻿Public Class FormAllClass
+﻿Imports Microsoft.Win32
+
+Public Class FormAllClass
 
 
+
+    Friend dbkey As Microsoft.Win32.RegistryKey
 
     Shared _frmIndividual As FormIndividualClass
+
+    Friend dblocation As String
+    Friend connString As String
 
     Private Sub EmployeeBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
@@ -13,10 +20,41 @@
 
     Private Sub FormAllClass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _frmIndividual = New FormIndividualClass
-        _frmIndividual.MainForm = Me
+        _frmIndividual._mainForm = Me
 
-        'TODO: This line of code loads data into the 'ActivityDataSet.Employee' table. You can move, or remove it, as needed.
-        Me.EmployeeTableAdapter.Fill(Me.ActivityDataSet.Employee)
+        Dim connected As Boolean = False
+
+        While Not connected
+            Try
+                dbkey = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\UWPCS3340Prog6")
+                dblocation = dbkey.GetValue("Software\UWPCS3340Prog6", "")
+                connString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & dblocation
+
+                EmployeeTableAdapter.Connection.ConnectionString = connString
+
+                'TODO: This line of code loads data into the 'ActivityDataSet.Employee' table. You can move, or remove it, as needed.
+                Me.EmployeeTableAdapter.Fill(Me.ActivityDataSet.Employee)
+                connected = True
+                Me.BringToFront()
+            Catch ex As Exception
+                connString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source="
+
+                Dim openDB As New OpenFileDialog
+                If openDB.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                    dblocation = openDB.FileName
+                    connString &= dblocation
+
+                    dbkey.SetValue("Software\UWPCS3340Prog6", dblocation, RegistryValueKind.String)
+                Else
+                    Exit While
+                End If
+            End Try
+        End While
+
+        If Not connected Then
+            MsgBox("No database selected!")
+            Application.Exit()
+        End If
 
     End Sub
 
