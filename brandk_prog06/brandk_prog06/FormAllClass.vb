@@ -1,5 +1,13 @@
 ﻿Imports Microsoft.Win32
 
+'----------------------------------------------
+' Name: Kody Brand
+' Date: 4/05/2016
+' Description: Program6
+'              Class FormAllClass
+'                 The GUI Class for all records
+'----------------------------------------------
+
 Public Class FormAllClass
 
 
@@ -11,6 +19,7 @@ Public Class FormAllClass
     Friend dblocation As String
     Friend connString As String
 
+    ' Hanles the save button
     Private Sub EmployeeBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.EmployeeBindingSource.EndEdit()
@@ -18,6 +27,7 @@ Public Class FormAllClass
 
     End Sub
 
+    ' Loading event for the form
     Private Sub FormAllClass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _frmIndividual = New FormIndividualClass
         _frmIndividual._mainForm = Me
@@ -58,10 +68,12 @@ Public Class FormAllClass
 
     End Sub
 
+    ' Handles the exit button
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
     End Sub
 
+    ' Handles the reload button
     Private Sub btnReload_Click(sender As Object, e As EventArgs) Handles btnReload.Click
         Try
             Me.EmployeeTableAdapter.Fill(Me.ActivityDataSet.Employee)
@@ -70,12 +82,14 @@ Public Class FormAllClass
         End Try
     End Sub
 
+    ' Changes form to individual form
     Private Sub btnIndividual_Click(sender As Object, e As EventArgs) Handles btnIndividual.Click
         Me.Hide()
         _frmIndividual.Show()
         _frmIndividual.BringToFront()
     End Sub
 
+    ' Displays the db location
     Private Sub btnDBLocate_Click(sender As Object, e As EventArgs) Handles btnDBLocate.Click
         MessageBox.Show(Me.EmployeeTableAdapter.Connection.DataSource, "Program 6 Database Location")
     End Sub
