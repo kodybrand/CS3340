@@ -27,7 +27,6 @@ Partial Class FormOrderClass
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnPrevious = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.dgvOrders = New System.Windows.Forms.DataGridView()
         Me.dgvDetails = New System.Windows.Forms.DataGridView()
         Me.btnUpdateOrder = New System.Windows.Forms.Button()
         Me.btnUpdateDetails = New System.Windows.Forms.Button()
@@ -35,14 +34,15 @@ Partial Class FormOrderClass
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        CType(Me.dgvOrders, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgvOrders = New System.Windows.Forms.DataGridView()
         CType(Me.dgvDetails, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvOrders, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'rdoAll
         '
         Me.rdoAll.AutoSize = True
-        Me.rdoAll.Location = New System.Drawing.Point(440, 64)
+        Me.rdoAll.Location = New System.Drawing.Point(470, 69)
         Me.rdoAll.Name = "rdoAll"
         Me.rdoAll.Size = New System.Drawing.Size(70, 17)
         Me.rdoAll.TabIndex = 0
@@ -53,7 +53,7 @@ Partial Class FormOrderClass
         'rdoEmployee
         '
         Me.rdoEmployee.AutoSize = True
-        Me.rdoEmployee.Location = New System.Drawing.Point(440, 101)
+        Me.rdoEmployee.Location = New System.Drawing.Point(470, 103)
         Me.rdoEmployee.Name = "rdoEmployee"
         Me.rdoEmployee.Size = New System.Drawing.Size(120, 17)
         Me.rdoEmployee.TabIndex = 1
@@ -88,25 +88,17 @@ Partial Class FormOrderClass
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'dgvOrders
-        '
-        Me.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvOrders.Location = New System.Drawing.Point(29, 23)
-        Me.dgvOrders.Name = "dgvOrders"
-        Me.dgvOrders.Size = New System.Drawing.Size(240, 127)
-        Me.dgvOrders.TabIndex = 5
-        '
         'dgvDetails
         '
         Me.dgvDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDetails.Location = New System.Drawing.Point(30, 185)
         Me.dgvDetails.Name = "dgvDetails"
-        Me.dgvDetails.Size = New System.Drawing.Size(240, 127)
+        Me.dgvDetails.Size = New System.Drawing.Size(317, 127)
         Me.dgvDetails.TabIndex = 6
         '
         'btnUpdateOrder
         '
-        Me.btnUpdateOrder.Location = New System.Drawing.Point(154, 156)
+        Me.btnUpdateOrder.Location = New System.Drawing.Point(30, 156)
         Me.btnUpdateOrder.Name = "btnUpdateOrder"
         Me.btnUpdateOrder.Size = New System.Drawing.Size(115, 23)
         Me.btnUpdateOrder.TabIndex = 7
@@ -115,7 +107,7 @@ Partial Class FormOrderClass
         '
         'btnUpdateDetails
         '
-        Me.btnUpdateDetails.Location = New System.Drawing.Point(155, 316)
+        Me.btnUpdateDetails.Location = New System.Drawing.Point(30, 316)
         Me.btnUpdateDetails.Name = "btnUpdateDetails"
         Me.btnUpdateDetails.Size = New System.Drawing.Size(115, 23)
         Me.btnUpdateDetails.TabIndex = 8
@@ -154,12 +146,21 @@ Partial Class FormOrderClass
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Employee ID"
         '
+        'dgvOrders
+        '
+        Me.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvOrders.Location = New System.Drawing.Point(30, 23)
+        Me.dgvOrders.Name = "dgvOrders"
+        Me.dgvOrders.Size = New System.Drawing.Size(317, 127)
+        Me.dgvOrders.TabIndex = 13
+        '
         'FormOrderClass
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(701, 351)
         Me.ControlBox = False
+        Me.Controls.Add(Me.dgvOrders)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtID)
@@ -167,7 +168,6 @@ Partial Class FormOrderClass
         Me.Controls.Add(Me.btnUpdateDetails)
         Me.Controls.Add(Me.btnUpdateOrder)
         Me.Controls.Add(Me.dgvDetails)
-        Me.Controls.Add(Me.dgvOrders)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnPrevious)
         Me.Controls.Add(Me.btnNext)
@@ -175,8 +175,8 @@ Partial Class FormOrderClass
         Me.Controls.Add(Me.rdoAll)
         Me.Name = "FormOrderClass"
         Me.Text = "Orders"
-        CType(Me.dgvOrders, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvDetails, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvOrders, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -186,7 +186,6 @@ Partial Class FormOrderClass
     Friend WithEvents btnNext As System.Windows.Forms.Button
     Friend WithEvents btnPrevious As System.Windows.Forms.Button
     Friend WithEvents btnBack As System.Windows.Forms.Button
-    Friend WithEvents dgvOrders As System.Windows.Forms.DataGridView
     Friend WithEvents dgvDetails As System.Windows.Forms.DataGridView
     Friend WithEvents btnUpdateOrder As System.Windows.Forms.Button
     Friend WithEvents btnUpdateDetails As System.Windows.Forms.Button
@@ -194,4 +193,5 @@ Partial Class FormOrderClass
     Friend WithEvents txtID As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents dgvOrders As System.Windows.Forms.DataGridView
 End Class

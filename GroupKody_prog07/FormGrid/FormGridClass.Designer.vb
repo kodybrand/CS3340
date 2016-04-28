@@ -25,7 +25,6 @@ Partial Class FormGridClass
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormGridClass))
         Me.TheBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.btnNew = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.btnFirst = New System.Windows.Forms.ToolStripButton()
@@ -36,11 +35,12 @@ Partial Class FormGridClass
         Me.btnNext = New System.Windows.Forms.ToolStripButton()
         Me.btnLast = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.TheBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TheDataGridView = New System.Windows.Forms.DataGridView()
+        Me.btnNew = New System.Windows.Forms.ToolStripButton()
         Me.btnSave = New System.Windows.Forms.ToolStripLabel()
         Me.btnReload = New System.Windows.Forms.ToolStripLabel()
         Me.btnBack = New System.Windows.Forms.ToolStripLabel()
+        Me.TheBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TheDataGridView = New System.Windows.Forms.DataGridView()
         CType(Me.TheBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TheBindingNavigator.SuspendLayout()
         CType(Me.TheBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,15 +63,6 @@ Partial Class FormGridClass
         Me.TheBindingNavigator.Size = New System.Drawing.Size(653, 25)
         Me.TheBindingNavigator.TabIndex = 0
         Me.TheBindingNavigator.Text = "BindingNavigator1"
-        '
-        'btnNew
-        '
-        Me.btnNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnNew.Image = CType(resources.GetObject("btnNew.Image"), System.Drawing.Image)
-        Me.btnNew.Name = "btnNew"
-        Me.btnNew.RightToLeftAutoMirrorImage = True
-        Me.btnNew.Size = New System.Drawing.Size(23, 22)
-        Me.btnNew.Text = "Add new"
         '
         'BindingNavigatorCountItem
         '
@@ -149,13 +140,14 @@ Partial Class FormGridClass
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'TheDataGridView
+        'btnNew
         '
-        Me.TheDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TheDataGridView.Location = New System.Drawing.Point(22, 42)
-        Me.TheDataGridView.Name = "TheDataGridView"
-        Me.TheDataGridView.Size = New System.Drawing.Size(619, 322)
-        Me.TheDataGridView.TabIndex = 1
+        Me.btnNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnNew.Image = CType(resources.GetObject("btnNew.Image"), System.Drawing.Image)
+        Me.btnNew.Name = "btnNew"
+        Me.btnNew.RightToLeftAutoMirrorImage = True
+        Me.btnNew.Size = New System.Drawing.Size(23, 22)
+        Me.btnNew.Text = "Add new"
         '
         'btnSave
         '
@@ -174,6 +166,14 @@ Partial Class FormGridClass
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(32, 22)
         Me.btnBack.Text = "Back"
+        '
+        'TheDataGridView
+        '
+        Me.TheDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TheDataGridView.Location = New System.Drawing.Point(22, 42)
+        Me.TheDataGridView.Name = "TheDataGridView"
+        Me.TheDataGridView.Size = New System.Drawing.Size(619, 322)
+        Me.TheDataGridView.TabIndex = 1
         '
         'FormGridClass
         '
@@ -194,7 +194,6 @@ Partial Class FormGridClass
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TheBindingNavigator As System.Windows.Forms.BindingNavigator
     Friend WithEvents btnNew As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorCountItem As System.Windows.Forms.ToolStripLabel
     Friend WithEvents BindingNavigatorDeleteItem As System.Windows.Forms.ToolStripButton
@@ -206,9 +205,10 @@ Partial Class FormGridClass
     Friend WithEvents btnNext As System.Windows.Forms.ToolStripButton
     Friend WithEvents btnLast As System.Windows.Forms.ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents TheBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents TheDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents btnSave As System.Windows.Forms.ToolStripLabel
     Friend WithEvents btnReload As System.Windows.Forms.ToolStripLabel
     Friend WithEvents btnBack As System.Windows.Forms.ToolStripLabel
+    Public WithEvents TheDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents TheBindingNavigator As System.Windows.Forms.BindingNavigator
+    Friend WithEvents TheBindingSource As System.Windows.Forms.BindingSource
 End Class

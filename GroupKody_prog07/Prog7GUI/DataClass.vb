@@ -1,5 +1,13 @@
 ﻿Imports Microsoft.Win32
 
+'----------------------------------------------
+' Name: GroupKody
+' Date: 4/28/2016
+' Description: Program7
+'              Class DataClass: Handles all the setup of the tables.
+'               
+'----------------------------------------------
+
 Public Class DataClass
     Public Shared myCon As New OleDb.OleDbConnection
 
@@ -36,7 +44,7 @@ Public Class DataClass
     Public Shared orderDetailAdapter As New OleDb.OleDbDataAdapter
     Public Shared orderDetailBuilder As OleDb.OleDbCommandBuilder  ' Not New for this one
 
-
+    ' Sets up all the tables
     Public Shared Sub setUpTable()
 
         Try
@@ -71,7 +79,7 @@ Public Class DataClass
             ' Order
             DataClass.orderCmd.Connection = DataClass.myCon
             DataClass.orderCmd.CommandType = CommandType.Text
-            DataClass.orderCmd.CommandText = "Select * from orders"
+            DataClass.orderCmd.CommandText = "Select * from Orders"
             DataClass.orderAdapter.SelectCommand = DataClass.orderCmd
             DataClass.orderBuilder = New OleDb.OleDbCommandBuilder(DataClass.orderAdapter)
             DataClass.orderAdapter.Fill(DataClass.orderTbl)
