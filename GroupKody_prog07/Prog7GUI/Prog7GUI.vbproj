@@ -104,6 +104,9 @@
     <EmbeddedResource Include="FormClassProg7GUI.resx">
       <DependentUpon>FormClassProg7GUI.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOrderClass.resx">
+      <DependentUpon>FormOrderClass.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

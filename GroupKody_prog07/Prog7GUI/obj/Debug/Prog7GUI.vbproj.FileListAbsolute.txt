@@ -13,3 +13,18 @@ C:\Users\kodyb\Documents\Visual Studio 2012\Projects\GroupKody_prog07\Prog7GUI\o
 C:\Users\kodyb\Documents\Visual Studio 2012\Projects\GroupKody_prog07\Prog7GUI\obj\Debug\Prog7GUI.exe
 C:\Users\kodyb\Documents\Visual Studio 2012\Projects\GroupKody_prog07\Prog7GUI\obj\Debug\Prog7GUI.xml
 C:\Users\kodyb\Documents\Visual Studio 2012\Projects\GroupKody_prog07\Prog7GUI\obj\Debug\Prog7GUI.pdb
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\bin\Debug\Prog7GUI.exe.config
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\bin\Debug\Prog7GUI.exe
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\bin\Debug\Prog7GUI.pdb
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\bin\Debug\Prog7GUI.xml
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\bin\Debug\FormGrid.dll
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\bin\Debug\FormGrid.pdb
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\bin\Debug\FormGrid.xml
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\obj\Debug\Prog7GUI.vbprojResolveAssemblyReference.cache
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\obj\Debug\Prog7GUI.FormClassProg7GUI.resources
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\obj\Debug\Prog7GUI.FormOrderClass.resources
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\obj\Debug\Prog7GUI.Resources.resources
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\obj\Debug\Prog7GUI.vbproj.GenerateResource.Cache
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\obj\Debug\Prog7GUI.exe
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\obj\Debug\Prog7GUI.xml
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\Prog7GUI\obj\Debug\Prog7GUI.pdb

@@ -8,3 +8,13 @@ C:\Users\kodyb\Documents\Visual Studio 2012\Projects\GroupKody_prog07\FormGrid\o
 C:\Users\kodyb\Documents\Visual Studio 2012\Projects\GroupKody_prog07\FormGrid\obj\Debug\FormGrid.dll
 C:\Users\kodyb\Documents\Visual Studio 2012\Projects\GroupKody_prog07\FormGrid\obj\Debug\FormGrid.xml
 C:\Users\kodyb\Documents\Visual Studio 2012\Projects\GroupKody_prog07\FormGrid\obj\Debug\FormGrid.pdb
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\FormGrid\bin\Debug\FormGrid.dll.config
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\FormGrid\bin\Debug\FormGrid.dll
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\FormGrid\bin\Debug\FormGrid.pdb
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\FormGrid\bin\Debug\FormGrid.xml
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\FormGrid\obj\Debug\UWPCS3340.FormGridClass.resources
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\FormGrid\obj\Debug\UWPCS3340.Resources.resources
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\FormGrid\obj\Debug\FormGrid.vbproj.GenerateResource.Cache
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\FormGrid\obj\Debug\FormGrid.dll
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\FormGrid\obj\Debug\FormGrid.xml
+C:\Users\Kody\Documents\Projects\CS3340\GroupKody_prog07\FormGrid\obj\Debug\FormGrid.pdb

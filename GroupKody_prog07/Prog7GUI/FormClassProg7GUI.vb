@@ -51,4 +51,16 @@ Public Class FormClassProg7GUI
     Private Sub btnDB_Click(sender As Object, e As EventArgs) Handles btnDB.Click
         MessageBox.Show(DataClass.dbLocation)
     End Sub
+
+    Private Sub btnOrders_Click(sender As Object, e As EventArgs) Handles btnOrders.Click
+        Hide()
+        _orderForm.Show()
+        _orderForm.BringToFront()
+    End Sub
+
+    Private Sub btnProducts_Click(sender As Object, e As EventArgs) Handles btnProducts.Click
+        Show()
+        _productGridForm.Show()
+        _productGridForm.BringToFront()
+    End Sub
 End Class

@@ -7,19 +7,19 @@ Public Class DataClass
     Public Shared dblocation As String
 
     ' Employee
-    Public Shared employeeTbl As New System.Data.DataTable("Employee")
+    Public Shared employeeTbl As New System.Data.DataTable("Employees")
     Public Shared employeeCmd As New OleDb.OleDbCommand
     Public Shared employeeAdapter As New OleDb.OleDbDataAdapter
     Public Shared employeeBuilder As OleDb.OleDbCommandBuilder  ' Not New for this one
 
     ' Product
-    Public Shared productTbl As New System.Data.DataTable("Product")
+    Public Shared productTbl As New System.Data.DataTable("Products")
     Public Shared productCmd As New OleDb.OleDbCommand
     Public Shared productAdapter As New OleDb.OleDbDataAdapter
     Public Shared productBuilder As OleDb.OleDbCommandBuilder  ' Not New for this one
 
     ' Order
-    Public Shared orderTbl As New System.Data.DataTable("Order")
+    Public Shared orderTbl As New System.Data.DataTable("Orders")
     Public Shared orderCmd As New OleDb.OleDbCommand
     Public Shared orderAdapter As New OleDb.OleDbDataAdapter
     Public Shared orderBuilder As OleDb.OleDbCommandBuilder  ' Not New for this one
@@ -31,7 +31,7 @@ Public Class DataClass
     Public Shared customerBuilder As OleDb.OleDbCommandBuilder  ' Not New for this one
 
     ' OrderDetail
-    Public Shared orderDetailTbl As New System.Data.DataTable("orderDetail")
+    Public Shared orderDetailTbl As New System.Data.DataTable("OrderDetails")
     Public Shared orderDetailCmd As New OleDb.OleDbCommand
     Public Shared orderDetailAdapter As New OleDb.OleDbDataAdapter
     Public Shared orderDetailBuilder As OleDb.OleDbCommandBuilder  ' Not New for this one
@@ -44,61 +44,45 @@ Public Class DataClass
             dblocation = dbkey.GetValue("Software\UWPCS3340Prog7", "")
             myCon.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + DataClass.dblocation
 
-            ' Employee Table
-            employeeCmd.Connection = DataClass.myCon
-            employeeCmd.CommandType = CommandType.Text
-            employeeCmd.CommandText = "Select * from employees"
-            employeeAdapter.SelectCommand = DataClass.employeeCmd
-            employeeBuilder = New OleDb.OleDbCommandBuilder(employeeAdapter)
-            employeeAdapter.Fill(DataClass.employeeTbl)
+            ' Employee
+            DataClass.employeeCmd.Connection = DataClass.myCon
+            DataClass.employeeCmd.CommandType = CommandType.Text
+            DataClass.employeeCmd.CommandText = "Select * from employees"
+            DataClass.employeeAdapter.SelectCommand = DataClass.employeeCmd
+            DataClass.employeeBuilder = New OleDb.OleDbCommandBuilder(DataClass.employeeAdapter)
+            DataClass.employeeAdapter.Fill(DataClass.employeeTbl)
 
-            employeeBuilder = New OleDb.OleDbCommandBuilder(employeeAdapter)
-            employeeAdapter.Fill(employeeTbl)
+            ' Customer
+            DataClass.customerCmd.Connection = DataClass.myCon
+            DataClass.customerCmd.CommandType = CommandType.Text
+            DataClass.customerCmd.CommandText = "Select * from customers"
+            DataClass.customerAdapter.SelectCommand = DataClass.customerCmd
+            DataClass.customerBuilder = New OleDb.OleDbCommandBuilder(DataClass.customerAdapter)
+            DataClass.customerAdapter.Fill(DataClass.customerTbl)
 
-            ' Product Table
-            productCmd.Connection = DataClass.myCon
-            productCmd.CommandType = CommandType.Text
-            productCmd.CommandText = "Select * from products"
-            productAdapter.SelectCommand = DataClass.productCmd
-            productBuilder = New OleDb.OleDbCommandBuilder(productAdapter)
-            productAdapter.Fill(DataClass.productTbl)
+            ' Product
+            DataClass.productCmd.Connection = DataClass.myCon
+            DataClass.productCmd.CommandType = CommandType.Text
+            DataClass.productCmd.CommandText = "Select * from products"
+            DataClass.productAdapter.SelectCommand = DataClass.productCmd
+            DataClass.productBuilder = New OleDb.OleDbCommandBuilder(DataClass.productAdapter)
+            DataClass.productAdapter.Fill(DataClass.productTbl)
 
-            productBuilder = New OleDb.OleDbCommandBuilder(productAdapter)
-            productAdapter.Fill(productTbl)
+            ' Order
+            DataClass.orderCmd.Connection = DataClass.myCon
+            DataClass.orderCmd.CommandType = CommandType.Text
+            DataClass.orderCmd.CommandText = "Select * from orders"
+            DataClass.orderAdapter.SelectCommand = DataClass.orderCmd
+            DataClass.orderBuilder = New OleDb.OleDbCommandBuilder(DataClass.orderAdapter)
+            DataClass.orderAdapter.Fill(DataClass.orderTbl)
 
-            ' Order Table
-            orderCmd.Connection = DataClass.myCon
-            orderCmd.CommandType = CommandType.Text
-            orderCmd.CommandText = "Select * from orders"
-            orderAdapter.SelectCommand = DataClass.orderCmd
-            orderBuilder = New OleDb.OleDbCommandBuilder(orderAdapter)
-            orderAdapter.Fill(DataClass.orderTbl)
-
-            orderBuilder = New OleDb.OleDbCommandBuilder(orderAdapter)
-            orderAdapter.Fill(orderTbl)
-
-            ' Customer Table
-            customerCmd.Connection = DataClass.myCon
-            customerCmd.CommandType = CommandType.Text
-            customerCmd.CommandText = "Select * from customers"
-            customerAdapter.SelectCommand = DataClass.customerCmd
-            customerBuilder = New OleDb.OleDbCommandBuilder(customerAdapter)
-            customerAdapter.Fill(DataClass.customerTbl)
-
-            customerBuilder = New OleDb.OleDbCommandBuilder(customerAdapter)
-            customerAdapter.Fill(customerTbl)
-
-            ' OrderDetail Table
-            orderDetailCmd.Connection = DataClass.myCon
-            orderDetailCmd.CommandType = CommandType.Text
-            orderDetailCmd.CommandText = "Select * from orderDetails"
-            orderDetailAdapter.SelectCommand = DataClass.orderDetailCmd
-            orderDetailBuilder = New OleDb.OleDbCommandBuilder(orderDetailAdapter)
-            orderDetailAdapter.Fill(DataClass.orderDetailTbl)
-
-            orderDetailBuilder = New OleDb.OleDbCommandBuilder(orderDetailAdapter)
-            orderDetailAdapter.Fill(orderDetailTbl)
-
+            ' Order Details
+            DataClass.orderDetailCmd.Connection = DataClass.myCon
+            DataClass.orderDetailCmd.CommandType = CommandType.Text
+            DataClass.orderDetailCmd.CommandText = "Select * from orderDetails"
+            DataClass.orderDetailAdapter.SelectCommand = DataClass.orderDetailCmd
+            DataClass.orderDetailBuilder = New OleDb.OleDbCommandBuilder(DataClass.orderDetailAdapter)
+            DataClass.orderDetailAdapter.Fill(DataClass.orderDetailTbl)
         Catch ex As Exception
             Dim openDB As New OpenFileDialog
             If openDB.ShowDialog() = Windows.Forms.DialogResult.OK Then
@@ -107,13 +91,6 @@ Public Class DataClass
 
                 dbkey.SetValue("Software\UWPCS3340Prog7", dblocation, RegistryValueKind.String)
             End If
-
-
-
         End Try
-
-
-
-
     End Sub
 End Class
